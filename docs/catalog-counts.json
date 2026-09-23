@@ -1,185 +1,31 @@
 {
-  "products": 3133,
-  "departments": {
-    "living-room": 500,
-    "rugs": 260,
-    "bedroom": 145,
-    "decor": 302,
-    "lighting": 259,
-    "storage": 163,
-    "pet": 48,
-    "bedding": 212,
-    "outdoor": 256,
-    "dining": 199,
-    "office": 99,
-    "kitchen": 313,
-    "appliances": 130,
-    "bath": 81,
-    "improvement": 70,
-    "kids": 79,
-    "seasonal": 17
-  },
-  "categories": {
-    "appliances": {
-      "Fans": 32,
-      "Irons": 2,
-      "Kettles": 8,
-      "Coffee Makers": 13,
-      "Home Appliances": 49,
-      "Vacuums": 10,
-      "Toasters": 4,
-      "Fridges": 5,
-      "Blenders": 6,
-      "Microwaves": 1
-    },
-    "bath": {
-      "Bath Accessories": 22,
-      "Bath Mats": 3,
-      "Towels": 45,
-      "Toilet Accessories": 8,
-      "Shower Caddies": 3
-    },
-    "bedding": {
-      "Decorative Pillows": 38,
-      "Throws & Blankets": 49,
-      "Pillowcases": 22,
-      "Bedding Essentials": 40,
-      "Mattress Protectors": 20,
-      "Comforters & Quilts": 6,
-      "Sheet Sets": 35,
-      "Duvet Covers": 2
-    },
-    "bedroom": {
-      "Nightstands": 20,
-      "Dressers": 26,
-      "Pillows": 14,
-      "Mattresses": 18,
-      "Headboards": 53,
-      "Beds & Bed Frames": 4,
-      "Mattress Toppers": 10
-    },
-    "decor": {
-      "Mirrors": 38,
-      "Picture Frames": 102,
-      "Wall Art": 23,
-      "Decorative Objects": 13,
-      "Candles & Holders": 38,
-      "Clocks": 21,
-      "Vases": 2,
-      "Curtains": 30,
-      "Curtain Hardware": 35
-    },
-    "dining": {
-      "Bar Carts": 8,
-      "Dining Tables": 63,
-      "Dining Chairs": 59,
-      "Sideboards & Buffets": 11,
-      "Bar Stools": 58
-    },
-    "improvement": {
-      "Tools": 42,
-      "Electrical Accessories": 11,
-      "Cabinet Hardware": 2,
-      "Showers": 4,
-      "Faucets": 4,
-      "Door Hardware": 6,
-      "Flooring": 1
-    },
-    "kids": {
-      "Kids D\u00e9cor": 37,
-      "Baby Bedding": 19,
-      "Kids Tables & Chairs": 7,
-      "Cots & Cribs": 4,
-      "Toy Storage": 10,
-      "Kids Beds": 2
-    },
-    "kitchen": {
-      "Kitchen Organisers": 5,
-      "Serveware": 23,
-      "Kitchen Essentials": 105,
-      "Dinnerware": 29,
-      "Knives & Boards": 26,
-      "Drinkware": 35,
-      "Kitchen Utensils": 17,
-      "Glassware": 20,
-      "Food Storage": 13,
-      "Bakeware": 9,
-      "Cookware": 17,
-      "Cutlery": 14
-    },
-    "lighting": {
-      "Chandeliers": 22,
-      "Floor Lamps": 38,
-      "Lighting Accessories": 39,
-      "Ceiling Lights": 19,
-      "Wall Lights": 38,
-      "Pendant Lights": 16,
-      "Desk Lamps": 4,
-      "Light Bulbs": 43,
-      "Table Lamps": 38,
-      "LED Strips": 2
-    },
-    "living-room": {
-      "Sofas & Sectionals": 97,
-      "Armchairs & Accent Chairs": 71,
-      "Sofa Beds": 26,
-      "Recliners": 32,
-      "Coffee Tables": 57,
-      "Display Cabinets": 24,
-      "Side Tables": 36,
-      "Benches": 34,
-      "Console Tables": 27,
-      "Ottomans & Poufs": 57,
-      "Accent Furniture": 37,
-      "TV Stands": 2
-    },
-    "office": {
-      "Desks": 19,
-      "Office Chairs": 20,
-      "Office Accessories": 55,
-      "Monitor Stands": 1,
-      "Whiteboards": 2,
-      "Desk Organisers": 2
-    },
-    "outdoor": {
-      "Planters": 45,
-      "Outdoor Accessories": 59,
-      "Outdoor Lighting": 36,
-      "Shade & Umbrellas": 30,
-      "Grills": 35,
-      "Garden Tools": 14,
-      "Outdoor Cushions": 34,
-      "Sun Loungers": 3
-    },
-    "pet": {
-      "Pet Accessories": 14,
-      "Pet Crates": 16,
-      "Pet Beds": 11,
-      "Cat Trees": 5,
-      "Pet Gates": 1,
-      "Pet Bowls": 1
-    },
-    "rugs": {
-      "Runners": 95,
-      "Area Rugs": 144,
-      "Natural Fibre Rugs": 20,
-      "Round Rugs": 1
-    },
-    "seasonal": {
-      "Wedding D\u00e9cor": 2,
-      "Seasonal D\u00e9cor": 3,
-      "Festive Lighting": 12
-    },
-    "storage": {
-      "Storage Bins": 79,
-      "Shelving": 13,
-      "Storage Baskets": 9,
-      "Drawer Organisers": 6,
-      "Closet Organisers": 15,
-      "Moving Supplies": 1,
-      "Laundry Storage": 20,
-      "Coat Racks": 17,
-      "Utility Carts": 3
-    }
+  "products": 5357,
+  "departments": 24,
+  "collections": 253,
+  "departmentCounts": {
+    "living-room": 707,
+    "rugs": 336,
+    "entryway": 204,
+    "bedroom": 367,
+    "decor": 481,
+    "lighting": 481,
+    "storage": 326,
+    "bedding": 388,
+    "outdoor": 412,
+    "garden": 139,
+    "dining": 292,
+    "office": 190,
+    "kitchen": 481,
+    "seasonal": 55,
+    "kids": 155,
+    "appliances": 199,
+    "cooling": 90,
+    "bath": 213,
+    "improvement": 227,
+    "tools": 85,
+    "window-treatments": 116,
+    "pet": 126,
+    "cleaning": 155,
+    "fitness": 86
   }
 }

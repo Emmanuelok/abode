@@ -1,0 +1,31 @@
+{
+  "products": 5357,
+  "departments": 24,
+  "collections": 253,
+  "departmentCounts": {
+    "living-room": 707,
+    "rugs": 336,
+    "entryway": 204,
+    "bedroom": 367,
+    "decor": 481,
+    "lighting": 481,
+    "storage": 326,
+    "bedding": 388,
+    "outdoor": 412,
+    "garden": 139,
+    "dining": 292,
+    "office": 190,
+    "kitchen": 481,
+    "seasonal": 55,
+    "kids": 155,
+    "appliances": 199,
+    "cooling": 90,
+    "bath": 213,
+    "improvement": 227,
+    "tools": 85,
+    "window-treatments": 116,
+    "pet": 126,
+    "cleaning": 155,
+    "fitness": 86
+  }
+}

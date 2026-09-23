@@ -1,0 +1,82 @@
+[
+  {
+    "id": "commons-winix-5500-2",
+    "name": "Winix 5500-2 air purifier",
+    "image": "/catalog/images/commons-winix-5500-2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Winix_5500-2_Air_Purifier.jpg",
+    "attribution": "TaurusEmerald / Wikimedia Commons, CC BY-SA 4.0",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "adaptation": "Resized and converted to WebP; share-alike terms retained where applicable"
+  },
+  {
+    "id": "commons-changing-table-cc0",
+    "name": "Changing table — Table à langer",
+    "image": "/catalog/images/commons-changing-table-cc0.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Table_%C3%A0_langer.jpg",
+    "attribution": "Benoît Prieur / Wikimedia Commons, CC0 1.0",
+    "licence": "CC0 1.0",
+    "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "adaptation": "Resized and converted to WebP; share-alike terms retained where applicable"
+  },
+  {
+    "id": "commons-baby-crib",
+    "name": "Baby crib",
+    "image": "/catalog/images/commons-baby-crib.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Baby_Crib_(49935766018).jpg",
+    "attribution": "Ajay Suresh, Baby Crib, CC BY 2.0",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "adaptation": "Resized and converted to WebP; share-alike terms retained where applicable"
+  },
+  {
+    "id": "commons-crib-changing-station",
+    "name": "Crib and changing table",
+    "image": "/catalog/images/commons-crib-changing-station.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2022-11-20_23_51_22_A_crib_and_changing_table_in_the_Mountainview_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg",
+    "attribution": "Famartin / Wikimedia Commons, CC BY-SA 4.0",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "adaptation": "Resized and converted to WebP; share-alike terms retained where applicable"
+  },
+  {
+    "id": "commons-suommo-bela-gold",
+    "name": "Suommo Bela Luxury Cot — Gold Edition",
+    "image": "/catalog/images/commons-suommo-bela-gold.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Bela-Gold-Suommo-.jpg",
+    "attribution": "Suommo / Wikimedia Commons, CC BY-SA 4.0",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "adaptation": "Resized and converted to WebP; share-alike terms retained where applicable"
+  },
+  {
+    "id": "commons-cork-wreath",
+    "name": "Cork Christmas wreath",
+    "image": "/catalog/images/commons-cork-wreath.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Christmas_wreath_Corks.JPG",
+    "attribution": "Eugenio Hansen, OFS / Wikimedia Commons, CC BY-SA 3.0",
+    "licence": "CC BY-SA 3.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "adaptation": "Resized and converted to WebP; share-alike terms retained where applicable"
+  },
+  {
+    "id": "commons-morris-trellis",
+    "name": "Trellis — William Morris wallpaper reference",
+    "image": "/catalog/images/commons-morris-trellis.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Trellis_MET_DP306738.jpg",
+    "attribution": "The Metropolitan Museum of Art, 23.163.4h; William Morris / Philip Webb, Trellis; CC0",
+    "licence": "CC0 1.0",
+    "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "adaptation": "Resized and converted to WebP; share-alike terms retained where applicable"
+  },
+  {
+    "id": "commons-toddler-bed",
+    "name": "White toddler bed with side guardrails",
+    "image": "/catalog/images/commons-toddler-bed.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2025-04-12_19_01_43_A_toddler_bed_inside_a_house_in_the_Mountainview_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg",
+    "attribution": "Famartin / Wikimedia Commons, CC BY-SA 4.0",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "adaptation": "Resized and converted to WebP; share-alike terms retained where applicable"
+  }
+]

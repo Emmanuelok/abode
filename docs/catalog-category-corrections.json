@@ -1,0 +1,338 @@
+[
+  {
+    "id": "abo-b0028n6sda",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Canoe Twin XL Sheet Set"
+  },
+  {
+    "id": "abo-b0028n6see",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Multi Stripe Twin XL Sheet Set"
+  },
+  {
+    "id": "abo-b0028n6sfi",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Fish Twin XL Sheet Set"
+  },
+  {
+    "id": "abo-b0028n6shg",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Blue Stripe Twin XL Sheet Set"
+  },
+  {
+    "id": "abo-b0028n6sje",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Citrus Twin XL Sheet Set"
+  },
+  {
+    "id": "abo-b0028n6slc",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Multi Dots Twin XL Sheet Set"
+  },
+  {
+    "id": "abo-b0028n6snk",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Alligator Twin XL Sheet Set"
+  },
+  {
+    "id": "abo-b0028n6svw",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Canoe/Multi Stripe Full/Queen Duvet Cover"
+  },
+  {
+    "id": "abo-b0028n6sxa",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Fish/Blue Stripe Full/Queen Duvet Cover"
+  },
+  {
+    "id": "abo-b0028n6sxu",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Citrus Twin Duvet Cover"
+  },
+  {
+    "id": "abo-b0028n6szi",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Multi Dots Full/Queen Duvet Cover"
+  },
+  {
+    "id": "abo-b0028n6t0c",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon Kids Printed Alligator Full/Queen Duvet Cover"
+  },
+  {
+    "id": "abo-b003s3rf18",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon 200-Thread Count Percale Printed Kids Butterfly, Twin XL Sheet Set Dots"
+  },
+  {
+    "id": "abo-b003s3rf2w",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon 200-Thread Count Percale Printed Kids Butterfly, Full/Queen Duvet Cover"
+  },
+  {
+    "id": "abo-b003s3rf3q",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [
+      "bedding/bedspreads"
+    ],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "Pinzon 200-Thread Count Percale Printed Kids Butterfly, Full/Queen Quilted Coverlet"
+  },
+  {
+    "id": "abo-b07m5sz38k",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "AmazonBasics Kids Duvet Cover Set, Microfiber, Stars - 135 x 200 cm + 80 x 80 cm"
+  },
+  {
+    "id": "abo-b082q1mhhp",
+    "department": "improvement",
+    "subcategory": "Electrical Accessories",
+    "collections": [
+      "tools/extension-leads-power-strips"
+    ],
+    "reason": "This is an electrical power distribution/surge-protection accessory, not a lighting fixture or LED strip.",
+    "sourceName": "AmazonCommercial Power Strip Surge Protector, 1 PACK, White"
+  },
+  {
+    "id": "abo-b082q21dtj",
+    "department": "improvement",
+    "subcategory": "Electrical Accessories",
+    "collections": [
+      "tools/extension-leads-power-strips"
+    ],
+    "reason": "This is an electrical power distribution/surge-protection accessory, not a lighting fixture or LED strip.",
+    "sourceName": "AmazonCommercial Heavy Duty Metal Surge Protector Power Strip, 1 PACK, Yellow"
+  },
+  {
+    "id": "abo-b083j9gx7m",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "AmazonBasics Kids Patterned Throw Blanket with Stuffed Animal Dinosaur"
+  },
+  {
+    "id": "abo-b0843zfhbs",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "AmazonBasics Kids Ultra-Soft Micromink Sherpa Blanket - Twin, Mountain Mint Green"
+  },
+  {
+    "id": "abo-b0843zhlf6",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "AmazonBasics Kids Bedding Nap Set with Llama Pillow and Fleece Throw Blanket"
+  },
+  {
+    "id": "abo-b0843zhvp4",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "AmazonBasics Kids Bedding Nap Set with Dinosaur Pillow and Fleece Throw Blanket"
+  },
+  {
+    "id": "abo-b0843znkg3",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "AmazonBasics Kids Bear Buddies Bedding Nap Set with Bear Pillow and Fleece Throw Blanket"
+  },
+  {
+    "id": "abo-b07k8p1cbq",
+    "department": "kids",
+    "subcategory": "Kids Bedding",
+    "collections": [],
+    "reason": "Title explicitly identifies children-sized bedding, not baby crib bedding or swaddles.",
+    "sourceName": "AmazonBasics Easy Care Super Soft Microfiber Kid's Bed-in-a-Bag Bedding Set - Twin, Multi-Color Dinosaurs"
+  },
+  {
+    "id": "abo-b082q1hjhd",
+    "department": "improvement",
+    "subcategory": "Electrical Accessories",
+    "collections": [],
+    "reason": "This is an electrical power distribution/surge-protection accessory, not a lighting fixture or LED strip.",
+    "sourceName": "AmazonCommercial 7-Outlet Power Strip Surge Protector 1080J with 6ft Cord and LED Indicator Light for Surge Protection & Ground, Sliding Covers, White, 4-Pack"
+  },
+  {
+    "id": "abo-b082q2frqs",
+    "department": "improvement",
+    "subcategory": "Electrical Accessories",
+    "collections": [],
+    "reason": "This is an electrical power distribution/surge-protection accessory, not a lighting fixture or LED strip.",
+    "sourceName": "AmazonCommercial 7-Outlet Power Strip Surge Protector 1080J with 6ft Cord and LED Indicator Light for Surge Protection & Ground, Sliding Covers, White, 6-Pack"
+  },
+  {
+    "id": "abo-b082q1lc74",
+    "department": "improvement",
+    "subcategory": "Electrical Accessories",
+    "collections": [],
+    "reason": "This is an electrical power distribution/surge-protection accessory, not a lighting fixture or LED strip.",
+    "sourceName": "AmazonCommercial 6 Outlet Heavy Duty Metal Surge Protector Power Strip, 1080J, LED Protected Indicator Light, 6ft Cord, Yellow, 4-Pack"
+  },
+  {
+    "id": "abo-b082q2bqqn",
+    "department": "improvement",
+    "subcategory": "Electrical Accessories",
+    "collections": [],
+    "reason": "This is an electrical power distribution/surge-protection accessory, not a lighting fixture or LED strip.",
+    "sourceName": "AmazonCommercial 6 Outlet Heavy Duty Metal Surge Protector Power Strip, 1080J, LED Protected Indicator Light, 6ft Cord, Yellow, 6-Pack"
+  },
+  {
+    "id": "abo-b082q1mhdg",
+    "department": "improvement",
+    "subcategory": "Electrical Accessories",
+    "collections": [],
+    "reason": "This is an electrical power distribution/surge-protection accessory, not a lighting fixture or LED strip.",
+    "sourceName": "Amazoncommercial 4-Outlet Mounted Wall Adapter Tap Surge Protector Power Strip with Surge Protection and Ground Light Indicator, 720 Joules, 2 Spaced Outlets, 6-Pack"
+  },
+  {
+    "id": "abo-b082q22w9l",
+    "department": "improvement",
+    "subcategory": "Electrical Accessories",
+    "collections": [],
+    "reason": "This is an electrical power distribution/surge-protection accessory, not a lighting fixture or LED strip.",
+    "sourceName": "Amazoncommercial 4-Outlet Mounted Wall Adapter Tap Surge Protector Power Strip with Surge Protection and Ground Light Indicator, 720 Joules, 2 Spaced Outlets, 4-Pack"
+  },
+  {
+    "id": "abo-b082np56yn",
+    "department": "storage",
+    "subcategory": "Closet Organisers",
+    "collections": [],
+    "reason": "Hanging fabric shelves are a wardrobe organiser, not a freestanding wardrobe.",
+    "sourceName": "UMI. by Amazon - 3-Shelf Fabric Hanging Shelves Organiser Collapsible Wardrobe Storage Shelves Durable Storage Rack Suit for Clothes Sweaters, Beige"
+  },
+  {
+    "id": "abo-b000mfgrby",
+    "department": "decor",
+    "subcategory": "Candles & Holders",
+    "collections": [],
+    "reason": "Votive candle holders are not drinking glassware.",
+    "sourceName": "Strathwood Crackle Glass Votive Holder, Set of 2"
+  },
+  {
+    "id": "abo-b000e4hy42",
+    "department": "outdoor",
+    "subcategory": "Outdoor Lighting",
+    "collections": [],
+    "reason": "Named mosaic glass oil lamps are lighting products, not drinking glassware.",
+    "sourceName": "Strathwood Mosaic Glass Oil Lamp, Set of 2"
+  },
+  {
+    "id": "abo-b07tf8x3ys",
+    "department": "kids",
+    "subcategory": "Active Play",
+    "collections": [],
+    "reason": "Source title lists a gross motor activity kit: mini golf, walking cups, balance board and ring toss; not pet feeding bowls.",
+    "sourceName": "AmazonBasics Gross Motor Case Pack, Mini Golf, Walking Cups, Balance Board, Meadow Ring Toss, Meercat Bowling"
+  },
+  {
+    "id": "abo-b07p679hsy",
+    "department": "pet",
+    "subcategory": "Pet Accessories",
+    "collections": [],
+    "reason": "Title identifies a crate cover, not a complete crate.",
+    "sourceName": "AmazonBasics Dog Metal Crate Cover, 48-Inch"
+  },
+  {
+    "id": "abo-b088b7qljj",
+    "department": "window-treatments",
+    "subcategory": "Curtains",
+    "collections": [
+      "decor/blinds"
+    ],
+    "reason": "Title identifies a two-panel fabric blackout curtain set; the generic translated word blinds does not make these roller/Venetian blinds.",
+    "sourceName": "Umi. Class 1 Blackout Curtain, Energy Saving, Fashionable, Insulated, Day and Night Blinds, 3 Sizes Available, For Living Room, Heat Retention, Energy Saving, Stylish, Bedroom, Luxury Fabric, UV Protection, Set of 2, Width 39.4 inches (100 cm), Length 53.1 inches (135 cm), Black"
+  },
+  {
+    "id": "abo-b08bvhqhy4",
+    "department": "kitchen",
+    "subcategory": "Serveware",
+    "collections": [],
+    "reason": "Title explicitly identifies an insulated serving casserole, not a dinnerware place setting.",
+    "sourceName": "Amazon Brand - Solimo Galaxy Insulated Stainless Steel Serving Casserole with Lid (2.5L)"
+  },
+  {
+    "id": "abo-b08bvn9bp6",
+    "department": "kitchen",
+    "subcategory": "Serveware",
+    "collections": [],
+    "reason": "Title explicitly identifies an insulated serving casserole, not a dinnerware place setting.",
+    "sourceName": "Amazon Brand - Solimo Galaxy Insulated Stainless Steel Serving Casserole with Lid (1.5L)"
+  },
+  {
+    "id": "abo-b08bvhrrzg",
+    "department": "kitchen",
+    "subcategory": "Serveware",
+    "collections": [],
+    "reason": "Title explicitly identifies an insulated serving casserole, not a dinnerware place setting.",
+    "sourceName": "Amazon Brand - Solimo Aura Insulated Stainless Steel Serving Casserole with Lid (1.5L)"
+  },
+  {
+    "id": "abo-b089j6b94l",
+    "department": "kitchen",
+    "subcategory": "Kitchen Utensils",
+    "collections": [],
+    "reason": "Mixing bowls with non-slip bases are food preparation equipment, not eating bowls or dinnerware place settings.",
+    "sourceName": "AmazonBasics 10-Piece Mixing Bowl Set with Lids - Non-Slip Base, Blue Rose Floral"
+  },
+  {
+    "id": "abo-b07dbyz83l",
+    "department": "kitchen",
+    "subcategory": "Kitchen Utensils",
+    "collections": [],
+    "reason": "Mixing bowls with non-slip bases are food preparation equipment, not eating bowls or dinnerware place settings.",
+    "sourceName": "Eono Essentials stainless steel 5-piece bowl set with lids, non-stick silicone bases, stackable"
+  }
+]

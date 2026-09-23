@@ -1,4 +1,4 @@
-export type Product={id:string;name:string;description:string;department:string;subcategory:string;image:string;imageUrls?:string[];brand:string;color:string;material:string;dimensions:string;source:string;originalId?:string;price:number;style:string};
+export type Product={id:string;name:string;description:string;department:string;subcategory:string;collections?:string[];sourceDataset?:string;license?:string;attribution?:string;licenseUrl?:string;image:string;imageUrls?:string[];brand:string;color:string;material:string;dimensions:string;source:string;originalId?:string;price:number;style:string};
 export type CartLine={id:string;quantity:number};
 export type RoomPlan={id:string;name:string;room:string;budget:number;width:number;length:number;products:string[];positions?:Record<string,{x:number;y:number;rotation:number}>};
 export type SavedState={cart:CartLine[];wishlist:string[];compare:string[];city:string;profile:{name:string;phone:string;email:string;address:string;gps:string};plans:RoomPlan[];registry:{name:string;date:string;items:string[]};recent:string[]};

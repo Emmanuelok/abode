@@ -6,11 +6,16 @@ const require=createRequire(import.meta.url);const wreq=createRequire(require.re
 const files=(await readdir('dist/server',{recursive:true})).filter(p=>p.endsWith('.js')).sort((a,b)=>a==='index.js'?-1:b==='index.js'?1:0);
 const modules=await Promise.all(files.map(async p=>({type:'ESModule',path:resolve('dist/server',p),contents:await readFile('dist/server/'+p,'utf8')})));
 const mf=new Miniflare({modules,modulesRoot:resolve('dist/server'),compatibilityDate:'2026-05-15',compatibilityFlags:['nodejs_compat'],d1Databases:{DB:'qa-abode'},assets:{directory:'dist/client',binding:'ASSETS',routerConfig:{has_user_worker:true}},cf:false,inspectorPort:0});
+const catalog=JSON.parse(await readFile('lib/catalog-data.json','utf8'));
+const departments=JSON.parse(await readFile('lib/departments.json','utf8'));
+const slugify=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 let checks=[];
 try{
  const db=await mf.getD1Database('DB');const schema=await readFile('drizzle/0000_confused_madame_web.sql','utf8');for(const s of schema.replaceAll('--> statement-breakpoint','').split(';').map(s=>s.trim()).filter(Boolean))await db.prepare(s).run();
  const call=async(path,body,cookie='')=>{const res=await mf.dispatchFetch('http://qa.local'+path,{method:body?'POST':'GET',headers:{...(body?{'Content-Type':'application/json','Origin':'http://qa.local'}:{}),...(cookie?{Cookie:cookie}:{})},body:body?JSON.stringify(body):undefined});const text=await res.text();let data;try{data=JSON.parse(text)}catch{data=text}return {res,data}};
- let r=await call('/api/catalog?limit=4');assert.equal(r.res.status,200);assert.equal(r.data.catalogTotal,3133);assert.equal(r.data.items.length,4);const product=r.data.items[0];checks.push('catalog: 3133 products, 4-item pagination');
+ let r=await call('/api/catalog?limit=4');assert.equal(r.res.status,200);assert.equal(r.data.catalogTotal,catalog.length);assert.equal(r.data.items.length,4);const product=r.data.items[0];checks.push(`catalog: ${catalog.length} products, 4-item pagination`);
+ let categoryCount=0;for(const d of departments){const dr=await call('/api/catalog?department='+d.slug+'&limit=1');assert(dr.data.total>0,'Empty department: '+d.slug);for(const g of d.groups)for(const label of g.items){const route=d.slug+'/'+slugify(label);const cr=await call('/api/catalog?department='+d.slug+'&subcategory='+slugify(label)+'&limit=1');assert.equal(cr.res.status,200,route);assert(cr.data.total>0,'Empty collection: '+route);assert(cr.data.items.length===1,route);categoryCount++}}checks.push(`${departments.length} departments and ${categoryCount} submenu collections: all populated`);
+ const page2=await call('/api/catalog?page=2&limit=4');assert(!page2.data.items.some(p=>r.data.items.some(first=>first.id===p.id)));checks.push('page navigation returns distinct products');
  r=await call('/api/catalog?ids=');assert.deepEqual(r.data.items,[]);checks.push('empty selections do not load unrelated products');
  r=await call('/api/catalog?q=sofa&sort=price-low&max=10000');assert(r.data.total>0);assert(r.data.items.every(p=>p.price<=10000));assert(r.data.items.every((p,i,a)=>!i||p.price>=a[i-1].price));checks.push('search, price filter and sorting');
  r=await call('/api/state');assert.equal(r.res.status,200);const cookie=r.res.headers.get('set-cookie').split(';')[0];assert.deepEqual(r.data.state.cart,[]);
@@ -22,9 +27,11 @@ try{
  r=await call('/api/requests',{kind:'order-quote',payload:{name:'QA Shopper',email:'qa@example.com',phone:'0241234567',address:'QA test address',gps:'WS-350-10592',items:[{id:product.id,quantity:2,guidePrice:1}],guideSubtotal:1}},cookie);assert.equal(r.res.status,201);assert.equal(r.data.status,'saved-preview');const quoteId=r.data.id;
  r=await call('/api/requests',undefined,cookie);assert.equal(r.data.requests.length,1);const payload=JSON.parse(r.data.requests[0].payload);assert.equal(payload.guideSubtotal,product.price*2);assert.equal(payload.paymentStatus,'not-collected');checks.push('quote persistence and server-side price calculation');
  r=await call('/api/requests');assert.equal(r.data.requests.length,0);checks.push('quote records scoped to their session');
- r=await call('/api/catalog/export');assert.equal(r.data.count,3133);checks.push('complete catalog export');
+ r=await call('/api/catalog/export');assert.equal(r.data.count,catalog.length);checks.push('complete catalog export');
  r=await call('/');assert.equal(r.res.status,200);assert(r.data.includes('Every room.'));checks.push('homepage server response');
  r=await call('/shop/living-room');assert.equal(r.res.status,200);assert(r.data.includes('Living Room'));checks.push('category route server response');
+ for(const slug of ['window-treatments','cleaning','cooling','fitness','tools','entryway','garden']){const page=await call('/shop/'+slug);assert.equal(page.res.status,200,slug);assert(page.data.includes('collection-hero'),slug)}checks.push('all seven new department pages render');
+ r=await call('/departments');assert.equal(r.res.status,200);assert(r.data.includes('Find your'));checks.push('complete department directory renders');
  r=await call('/product/'+product.id);assert.equal(r.res.status,200);assert(!r.data.includes('Every room.'));checks.push('direct product route does not render the homepage');
  await writeFile('docs/worker-verification.json',JSON.stringify({passed:checks,timestamp:new Date().toISOString()},null,2));console.log(JSON.stringify({passed:checks},null,2));
 }finally{await mf.dispose()}

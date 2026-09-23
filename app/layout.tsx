@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./redesign.css";
+import "./collections.css";
 
 export const metadata: Metadata = {
   title: "Abode Ghana | A home, beautifully yours",

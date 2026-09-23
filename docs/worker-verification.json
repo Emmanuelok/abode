@@ -1,6 +1,8 @@
 {
   "passed": [
-    "catalog: 3133 products, 4-item pagination",
+    "catalog: 5357 products, 4-item pagination",
+    "24 departments and 253 submenu collections: all populated",
+    "page navigation returns distinct products",
     "empty selections do not load unrelated products",
     "search, price filter and sorting",
     "durable cart and wishlist state",
@@ -11,7 +13,9 @@
     "complete catalog export",
     "homepage server response",
     "category route server response",
+    "all seven new department pages render",
+    "complete department directory renders",
     "direct product route does not render the homepage"
   ],
-  "timestamp": "2026-09-23T22:17:49.051Z"
+  "timestamp": "2026-09-23T23:59:08.310Z"
 }

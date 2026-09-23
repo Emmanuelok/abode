@@ -1,8 +1,9 @@
 {
-  "products": 3133,
-  "unique_main_images": 3133,
-  "departments": 17,
-  "populated_subcategories": 127,
+  "products": 5357,
+  "unique_main_images": 5357,
+  "departments": 24,
+  "populated_subcategories": 253,
+  "empty_menu_collections": 0,
   "local_images": "all decode successfully",
   "state_merge_and_user_isolation": "passed",
   "source_metadata": "reference collection; no live inventory"

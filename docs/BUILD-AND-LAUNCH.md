@@ -1,6 +1,6 @@
 # Abode Ghana
 
-A private, database-backed home and living storefront built around a 3,133-product licensed reference collection. Abode Ghana is a working brand, not a registered merchant identity.
+A private, database-backed home and living storefront built around a 5,357-product licensed reference collection. Abode Ghana is a working brand, not a registered merchant identity.
 
 ## Implemented surfaces
 
@@ -54,7 +54,7 @@ The preview is not a claim of complete Wayfair feature parity or commercial laun
 
 ## Verification
 
-The complete local Worker integration test covers catalog queries, persistence, guest isolation, invalid-input rejection, server-side quote totals and route rendering. All 3,133 local main images decode and have unique file hashes. Desktop category navigation and add/remove bag controls were exercised in the browser; the 390px mobile layout was visually checked and hero overflow corrected. WebMCP is feature-detected, but the preview browser does not expose modelContext, so its tool interface could not be exercised.
+The complete local Worker integration test covers catalog queries, persistence, guest isolation, invalid-input rejection, server-side quote totals and route rendering. All 5,357 local main images decode and have unique file hashes. Desktop category navigation and add/remove bag controls were exercised in the browser; the 390px mobile layout was visually checked and hero overflow corrected. WebMCP is feature-detected, but the preview browser does not expose modelContext, so its tool interface could not be exercised.
 
 
 ## September 23 interaction and design revision
@@ -66,3 +66,7 @@ Repaired client navigation, direct-route hydration, same-page menu dismissal, lo
 Browser checks passed on the managed preview: desktop mega-menu category routing; hero switching; search submission; price filtering and sorting; favourites and comparison; bag quantity and reload persistence; added-product drawer; product specifications and footprint rejection; three-step Ghana quotation and saved reference/details; room suggestions, named plan save and reopen; support enquiry and fresh supplier form; private gift-list save and CSV export; and delivery-city save. At 390px, reviewed homepage and product cards, expanded the department accordion, navigated to Coffee Tables, opened/closed filters, and corrected inherited button sizing. The download event watcher timed out, but native CSV files were created and the exported record/price were inspected successfully. These QA records exist only in the local development database.
 
 Commercial-launch dependencies above are unchanged. Verification does not establish supplier stock, payment acceptance, public customer identity, or complete Wayfair feature parity.
+
+
+## Current department expansion
+The reference collection now contains 5,357 unique named listings, 24 departments, and 253 menu collections, all populated. See CATALOG-EXPANSION.md and the generated verification reports for the current validation scope. The cloud-browser preview became unavailable during this revision; production Worker integration and asset validation are the publication gates.
