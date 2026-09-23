@@ -10,7 +10,8 @@
     "quote records scoped to their session",
     "complete catalog export",
     "homepage server response",
-    "category route server response"
+    "category route server response",
+    "direct product route does not render the homepage"
   ],
-  "timestamp": "2026-09-23T18:11:39.605Z"
+  "timestamp": "2026-09-23T22:17:49.051Z"
 }

@@ -23,7 +23,8 @@ try{
  r=await call('/api/requests',undefined,cookie);assert.equal(r.data.requests.length,1);const payload=JSON.parse(r.data.requests[0].payload);assert.equal(payload.guideSubtotal,product.price*2);assert.equal(payload.paymentStatus,'not-collected');checks.push('quote persistence and server-side price calculation');
  r=await call('/api/requests');assert.equal(r.data.requests.length,0);checks.push('quote records scoped to their session');
  r=await call('/api/catalog/export');assert.equal(r.data.count,3133);checks.push('complete catalog export');
- r=await call('/');assert.equal(r.res.status,200);assert(r.data.includes('A home,'));checks.push('homepage server response');
- r=await call('/shop/living-room');assert.equal(r.res.status,200);checks.push('category route server response');
+ r=await call('/');assert.equal(r.res.status,200);assert(r.data.includes('Every room.'));checks.push('homepage server response');
+ r=await call('/shop/living-room');assert.equal(r.res.status,200);assert(r.data.includes('Living Room'));checks.push('category route server response');
+ r=await call('/product/'+product.id);assert.equal(r.res.status,200);assert(!r.data.includes('Every room.'));checks.push('direct product route does not render the homepage');
  await writeFile('docs/worker-verification.json',JSON.stringify({passed:checks,timestamp:new Date().toISOString()},null,2));console.log(JSON.stringify({passed:checks},null,2));
 }finally{await mf.dispose()}

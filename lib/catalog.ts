@@ -12,9 +12,12 @@ export function queryCatalog(params:URLSearchParams){
  const id=params.get('id');if(id)return {product:productById(id)||null,related:products.filter(p=>p.id!==id&&p.subcategory===productById(id)?.subcategory).slice(0,8)};
  const ids=params.get('ids');if(params.has('ids'))return {items:(ids||'').split(',').slice(0,150).map(productById).filter(Boolean)};
  const q=(params.get('q')||'').trim().toLowerCase().slice(0,120);const dept=params.get('department');const sub=params.get('subcategory');
- const synonym:Record<string,string>={couch:'sofa',settee:'sofa',settees:'sofa',centre:'coffee',center:'coffee',duvet:'duvet',fridge:'refrigerator',cupboard:'cabinet',bedside:'nightstand',set:'set'};
+ const synonym:Record<string,string>={couch:'sofa',sofas:'sofa',chairs:'chair',tables:'table',couches:'sofa',lamps:'lamp',rugs:'rug',settee:'sofa',settees:'sofa',centre:'coffee',center:'coffee',duvet:'duvet',fridge:'refrigerator',cupboard:'cabinet',bedside:'nightstand',set:'set'};
  const words=q.split(/\s+/).filter(Boolean).map(w=>synonym[w]||w);
- let found=products.filter(p=>(!dept||p.department===dept)&&(!sub||slugify(p.subcategory)===sub)&&(!q||words.every(w=>(p.name+' '+p.description+' '+p.subcategory+' '+p.color+' '+p.material+' '+p.brand).toLowerCase().includes(w))));
+ const categoryMatches=products.filter(p=>(!dept||p.department===dept)&&(!sub||slugify(p.subcategory)===sub));
+ const primaryMatches=categoryMatches.filter(p=>!q||words.every(w=>(p.name+' '+p.subcategory+' '+p.color+' '+p.material+' '+p.brand).toLowerCase().includes(w)));
+ let found=primaryMatches.length||!q?primaryMatches:categoryMatches.filter(p=>words.every(w=>(p.name+' '+p.description+' '+p.subcategory+' '+p.color+' '+p.material+' '+p.brand).toLowerCase().includes(w)));
+
  const facets={colors:[...new Set(found.map(p=>p.color).filter(Boolean))].sort().slice(0,50),materials:[...new Set(found.map(p=>p.material).filter(Boolean))].sort().slice(0,45),brands:[...new Set(found.map(p=>p.brand).filter(Boolean))].sort().slice(0,45),subcategories:[...new Set(found.map(p=>p.subcategory))].sort()};
  const min=Number(params.get('min')||0),max=Number(params.get('max')||1000000);
  found=found.filter(p=>p.price>=min&&p.price<=max&&(!params.get('color')||p.color===params.get('color'))&&(!params.get('material')||p.material===params.get('material'))&&(!params.get('brand')||p.brand===params.get('brand')));

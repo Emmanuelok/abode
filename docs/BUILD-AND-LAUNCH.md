@@ -55,3 +55,14 @@ The preview is not a claim of complete Wayfair feature parity or commercial laun
 ## Verification
 
 The complete local Worker integration test covers catalog queries, persistence, guest isolation, invalid-input rejection, server-side quote totals and route rendering. All 3,133 local main images decode and have unique file hashes. Desktop category navigation and add/remove bag controls were exercised in the browser; the 390px mobile layout was visually checked and hero overflow corrected. WebMCP is feature-detected, but the preview browser does not expose modelContext, so its tool interface could not be exercised.
+
+
+## September 23 interaction and design revision
+
+Replaced the storefront presentation with a photographic editorial design, three switchable hero collections, 17-department discovery, product collections, bedroom/dining stories, and a room-planning invitation. Added three original generated editorial room images; product photographs remain the attributed reference collection. The same typography, warm palette, spacing and controls continue through catalog, detail, bag, service, help and account screens.
+
+Repaired client navigation, direct-route hydration, same-page menu dismissal, loading/error recovery, timed-out requests, optimistic field saves, queued changes, last-confirmed rollback, guest identity initialization, save-for-later updates, price bounds, search relevance, form lifecycle isolation, product measurement reset, and download URL lifetime. Added a bag confirmation drawer and persistent product actions. Removed the inactive promotional-code control. Privacy notices now open without discarding consent forms.
+
+Browser checks passed on the managed preview: desktop mega-menu category routing; hero switching; search submission; price filtering and sorting; favourites and comparison; bag quantity and reload persistence; added-product drawer; product specifications and footprint rejection; three-step Ghana quotation and saved reference/details; room suggestions, named plan save and reopen; support enquiry and fresh supplier form; private gift-list save and CSV export; and delivery-city save. At 390px, reviewed homepage and product cards, expanded the department accordion, navigated to Coffee Tables, opened/closed filters, and corrected inherited button sizing. The download event watcher timed out, but native CSV files were created and the exported record/price were inspected successfully. These QA records exist only in the local development database.
+
+Commercial-launch dependencies above are unchanged. Verification does not establish supplier stock, payment acceptance, public customer identity, or complete Wayfair feature parity.
