@@ -1,0 +1,29 @@
+import {createRequire} from 'node:module';
+import {readFile,writeFile,readdir} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import assert from 'node:assert/strict';
+const require=createRequire(import.meta.url);const wreq=createRequire(require.resolve('wrangler/package.json'));const {Miniflare}=wreq('miniflare');
+const files=(await readdir('dist/server',{recursive:true})).filter(p=>p.endsWith('.js')).sort((a,b)=>a==='index.js'?-1:b==='index.js'?1:0);
+const modules=await Promise.all(files.map(async p=>({type:'ESModule',path:resolve('dist/server',p),contents:await readFile('dist/server/'+p,'utf8')})));
+const mf=new Miniflare({modules,modulesRoot:resolve('dist/server'),compatibilityDate:'2026-05-15',compatibilityFlags:['nodejs_compat'],d1Databases:{DB:'qa-abode'},assets:{directory:'dist/client',binding:'ASSETS',routerConfig:{has_user_worker:true}},cf:false,inspectorPort:0});
+let checks=[];
+try{
+ const db=await mf.getD1Database('DB');const schema=await readFile('drizzle/0000_confused_madame_web.sql','utf8');for(const s of schema.replaceAll('--> statement-breakpoint','').split(';').map(s=>s.trim()).filter(Boolean))await db.prepare(s).run();
+ const call=async(path,body,cookie='')=>{const res=await mf.dispatchFetch('http://qa.local'+path,{method:body?'POST':'GET',headers:{...(body?{'Content-Type':'application/json','Origin':'http://qa.local'}:{}),...(cookie?{Cookie:cookie}:{})},body:body?JSON.stringify(body):undefined});const text=await res.text();let data;try{data=JSON.parse(text)}catch{data=text}return {res,data}};
+ let r=await call('/api/catalog?limit=4');assert.equal(r.res.status,200);assert.equal(r.data.catalogTotal,3133);assert.equal(r.data.items.length,4);const product=r.data.items[0];checks.push('catalog: 3133 products, 4-item pagination');
+ r=await call('/api/catalog?ids=');assert.deepEqual(r.data.items,[]);checks.push('empty selections do not load unrelated products');
+ r=await call('/api/catalog?q=sofa&sort=price-low&max=10000');assert(r.data.total>0);assert(r.data.items.every(p=>p.price<=10000));assert(r.data.items.every((p,i,a)=>!i||p.price>=a[i-1].price));checks.push('search, price filter and sorting');
+ r=await call('/api/state');assert.equal(r.res.status,200);const cookie=r.res.headers.get('set-cookie').split(';')[0];assert.deepEqual(r.data.state.cart,[]);
+ r=await call('/api/state',{key:'cart',value:[{id:product.id,quantity:2}]},cookie);assert.equal(r.res.status,200);
+ r=await call('/api/state',{key:'wishlist',value:[product.id]},cookie);assert.equal(r.res.status,200);
+ r=await call('/api/state',undefined,cookie);assert.equal(r.data.state.cart[0].quantity,2);assert.equal(r.data.state.wishlist[0],product.id);checks.push('durable cart and wishlist state');
+ r=await call('/api/state');assert.deepEqual(r.data.state.cart,[]);checks.push('guest-session data isolation');
+ r=await call('/api/state',{key:'cart',value:[{id:product.id,quantity:-1}]},cookie);assert.equal(r.res.status,400);checks.push('invalid quantity rejected');
+ r=await call('/api/requests',{kind:'order-quote',payload:{name:'QA Shopper',email:'qa@example.com',phone:'0241234567',address:'QA test address',gps:'WS-350-10592',items:[{id:product.id,quantity:2,guidePrice:1}],guideSubtotal:1}},cookie);assert.equal(r.res.status,201);assert.equal(r.data.status,'saved-preview');const quoteId=r.data.id;
+ r=await call('/api/requests',undefined,cookie);assert.equal(r.data.requests.length,1);const payload=JSON.parse(r.data.requests[0].payload);assert.equal(payload.guideSubtotal,product.price*2);assert.equal(payload.paymentStatus,'not-collected');checks.push('quote persistence and server-side price calculation');
+ r=await call('/api/requests');assert.equal(r.data.requests.length,0);checks.push('quote records scoped to their session');
+ r=await call('/api/catalog/export');assert.equal(r.data.count,3133);checks.push('complete catalog export');
+ r=await call('/');assert.equal(r.res.status,200);assert(r.data.includes('A home,'));checks.push('homepage server response');
+ r=await call('/shop/living-room');assert.equal(r.res.status,200);checks.push('category route server response');
+ await writeFile('docs/worker-verification.json',JSON.stringify({passed:checks,timestamp:new Date().toISOString()},null,2));console.log(JSON.stringify({passed:checks},null,2));
+}finally{await mf.dispose()}

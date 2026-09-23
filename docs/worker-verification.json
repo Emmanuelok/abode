@@ -1,0 +1,16 @@
+{
+  "passed": [
+    "catalog: 3133 products, 4-item pagination",
+    "empty selections do not load unrelated products",
+    "search, price filter and sorting",
+    "durable cart and wishlist state",
+    "guest-session data isolation",
+    "invalid quantity rejected",
+    "quote persistence and server-side price calculation",
+    "quote records scoped to their session",
+    "complete catalog export",
+    "homepage server response",
+    "category route server response"
+  ],
+  "timestamp": "2026-09-23T18:11:39.605Z"
+}

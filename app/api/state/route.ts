@@ -1,0 +1,8 @@
+import {stateFields} from '@/lib/validation';
+import {database,identity,sameOrigin,fail} from '@/lib/server';
+import {EMPTY_STATE} from '@/lib/types';
+import {productById} from '@/lib/catalog';
+export async function GET(){try{const user=await identity();const row=await database().prepare('SELECT state FROM shopper_state WHERE user_id = ?').bind(user.id).first<{state:string}>();return Response.json({state:row?{...EMPTY_STATE,...JSON.parse(row.state)}:EMPTY_STATE,user:{email:user.email,signedIn:user.signedIn}},{headers:{'Cache-Control':'no-store'}})}catch(e){return fail(e)}}
+export async function POST(req:Request){try{sameOrigin(req);const user=await identity();const data:any=await req.json();const key=data.key;const allowed=['cart','wishlist','compare','city','profile','plans','registry','recent'];if(!allowed.includes(key))return Response.json({error:'Unknown saved field'},{status:400});if(JSON.stringify(data).length>100000)return Response.json({error:'Saved selection is too large'},{status:400});
+ const parsed=stateFields[key as keyof typeof stateFields].safeParse(data.value);if(!parsed.success)return Response.json({error:parsed.error.issues[0]?.message||'Invalid saved data'},{status:400});const value=parsed.data;
+ const now=new Date().toISOString();await database().prepare("INSERT INTO shopper_state (user_id,state,updated_at) VALUES (?,?,?) ON CONFLICT(user_id) DO UPDATE SET state = json_set(shopper_state.state, ?, json(?)), updated_at = excluded.updated_at").bind(user.id,JSON.stringify({...EMPTY_STATE,[key]:value}),now,'$.'+key,JSON.stringify(value)).run();return Response.json({ok:true,value});}catch(e){return fail(e)}}
