@@ -1,5 +1,6 @@
 {
   "passed": [
+    "same-origin R2 gallery reads",
     "catalog: 5357 products, 4-item pagination",
     "24 departments and 253 submenu collections: all populated",
     "page navigation returns distinct products",
@@ -7,6 +8,8 @@
     "search, price filter and sorting",
     "durable cart and wishlist state",
     "guest-session data isolation",
+    "untrusted ChatGPT identity headers ignored",
+    "cross-origin state write rejected",
     "invalid quantity rejected",
     "quote persistence and server-side price calculation",
     "quote records scoped to their session",
@@ -17,5 +20,5 @@
     "complete department directory renders",
     "direct product route does not render the homepage"
   ],
-  "timestamp": "2026-09-24T20:07:39.693Z"
+  "timestamp": "2026-09-24T20:13:05.506Z"
 }
