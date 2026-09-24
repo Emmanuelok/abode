@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "abode",
+  "account_id": "e24b9546211a6f1a310bf8ac9c411114",
+  "main": "vinext/server/fetch-handler",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "abode-db",
+    "database_id": "24d29245-9892-469e-a2cd-b381e7d7a79d",
+    "migrations_dir": "drizzle"
+  }],
+  "r2_buckets": [{"binding":"GALLERY", "bucket_name":"abode-gallery"}]
+}
