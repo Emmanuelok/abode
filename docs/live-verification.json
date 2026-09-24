@@ -1,0 +1,51 @@
+{
+  "url": "https://abode.eo-kingsford.workers.dev",
+  "timestamp": "2026-09-24T20:28:39.944Z",
+  "passed": [
+    "catalogue count 5357 and pagination",
+    "distinct pages and empty selections",
+    "catalogue search, filtering and sorting",
+    "24 core routes return HTTP 200 and HTML",
+    "same-origin gallery JPEG matches uploaded SHA-256",
+    "distinct UUIDv4 guest cookies with Secure, HttpOnly and SameSite=Lax",
+    "guest cart/wishlist persistence and session isolation",
+    "forged identity headers ignored without changing guest identity",
+    "test cart and wishlist cleared and re-read"
+  ],
+  "routes": [
+    "/",
+    "/account",
+    "/cart",
+    "/catalog-studio",
+    "/checkout",
+    "/compare",
+    "/departments",
+    "/design",
+    "/help",
+    "/help/credits",
+    "/help/privacy",
+    "/help/terms",
+    "/planner",
+    "/product/abo-b07b4d88dy",
+    "/registry",
+    "/returns",
+    "/rooms",
+    "/shop",
+    "/shop/living-room",
+    "/special-request",
+    "/supplier",
+    "/support",
+    "/trade",
+    "/wishlist"
+  ],
+  "gallery": {
+    "path": "/catalog/gallery/f1392823161ffa4b973c9816ac30ca35.jpg",
+    "bytes": 4342,
+    "sha256": "fe16be4da307292e1883c48b52ef1cdf22b54a3d14c961f357418afc6d03f089"
+  },
+  "cleanup": {
+    "cart": "empty",
+    "wishlist": "empty",
+    "requestRecordsCreated": 0
+  }
+}

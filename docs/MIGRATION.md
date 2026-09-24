@@ -42,3 +42,12 @@ This is a reference catalogue and quotation preview. Prices are illustrative and
 Cloudflare preserves the existing runtime and D1 database while supporting all images on the same provider. Full gallery localization exceeds Workers Free's 20,000-file limit, so R2 holds the extra originals. No paid Workers-plan upgrade is required by this storage arrangement. Actual Cloudflare usage remains subject to account quotas and usage-based pricing.
 
 Primary references: [Workers Static Assets](https://developers.cloudflare.com/workers/static-assets/), [Workers limits](https://developers.cloudflare.com/workers/platform/limits/), [R2](https://developers.cloudflare.com/r2/), [D1](https://developers.cloudflare.com/d1/), [GitHub integration](https://developers.cloudflare.com/workers/ci-cd/builds/).
+
+## Completed deployment
+
+- Live address: https://abode.eo-kingsford.workers.dev
+- Application revision: `4df3d6937a84d87c181eee281cd66f27c6de949f`.
+- Cloudflare GitHub build `3460b6bc-6a18-4d79-abe6-7397556523a2` passed; `main` is connected for future deployments.
+- All 17,547 additional gallery originals (8,156,168,339 bytes) were uploaded to R2 with server-validated SHA-256 checksums. Every upload receipt was reconciled against its local file.
+- Production checks passed for 24 routes, catalogue search/pagination, gallery integrity, secure session cookies, persistent cart/wishlist, session isolation and forged-identity-header rejection. See `live-verification.json` and `gallery-transfer-audit.json`.
+- Browser verification confirmed the homepage, primary images and a switched product gallery image load from the app origin without browser errors.

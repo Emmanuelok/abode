@@ -2,6 +2,8 @@
 
 Ghana home and living catalogue recovered from ChatGPT Sites version 3 and migrated to Cloudflare.
 
+Live site: **https://abode.eo-kingsford.workers.dev**. The GitHub-connected Cloudflare deployment and live checks passed on 24 September 2026.
+
 ## What's included
 
 - 5,357 reference products, 24 departments and 253 populated collections.
