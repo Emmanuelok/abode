@@ -8,6 +8,27 @@
       "when": 1790185633438,
       "tag": "0000_confused_madame_web",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790282756593,
+      "tag": "0001_customer_auth",
+      "breakpoints": false
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1790282756594,
+      "tag": "0002_staff_inbox",
+      "breakpoints": false
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1790282756595,
+      "tag": "0003_intake_limits",
+      "breakpoints": false
     }
   ]
 }

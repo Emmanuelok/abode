@@ -1,8 +1,56 @@
-import {database,identity,sameOrigin,fail} from '@/lib/server';
-import {productById} from '@/lib/catalog';
-export async function GET(){try{const user=await identity();const rows=await database().prepare('SELECT id,kind,status,payload,created_at AS createdAt FROM requests WHERE user_id = ? ORDER BY created_at DESC LIMIT 100').bind(user.id).all();return Response.json({requests:rows.results},{headers:{'Cache-Control':'no-store'}})}catch(e){return fail(e)}}
-export async function POST(req:Request){try{sameOrigin(req);const user=await identity();const body:any=await req.json();if(!['order-quote','design','trade','supplier','support','return','price-alert','newsletter','special-request'].includes(body.kind))return Response.json({error:'Invalid request type'},{status:400});if(!body.payload||JSON.stringify(body.payload).length>50000)return Response.json({error:'Please shorten your request'},{status:400});const p=body.payload;
- if(typeof p.email!=='string'||!/^\S+@\S+\.\S+$/.test(p.email))return Response.json({error:'Enter a valid email address'},{status:400});
- if(body.kind==='order-quote'){if(typeof p.name!=='string'||!p.name.trim()||typeof p.phone!=='string'||!/^(?:\+233|0)\d{9}$/.test(p.phone.replace(/[\s-]/g,''))||typeof p.address!=='string'||!p.address.trim()||!Array.isArray(p.items)||!p.items.length||p.items.length>100)return Response.json({error:'Check your name, Ghana phone number, delivery address and bag'},{status:400});if(p.gps&&!/^[A-Z]{2}-\d{3,4}-\d{4,5}$/i.test(p.gps))return Response.json({error:'Check the digital address format, e.g. GA-123-4567'},{status:400});const lines=[];for(const x of p.items){const item=productById(x.id);if(!item||!Number.isInteger(x.quantity)||x.quantity<1||x.quantity>99)return Response.json({error:'A bag item is invalid'},{status:400});lines.push({id:item.id,name:item.name,quantity:x.quantity,guidePrice:item.price})}p.items=lines;p.guideSubtotal=lines.reduce((s,x)=>s+x.quantity*x.guidePrice,0);p.paymentStatus='not-collected';p.pricing='illustrative';}
- const recent=await database().prepare("SELECT count(*) AS count FROM requests WHERE user_id = ? AND created_at > ?").bind(user.id,new Date(Date.now()-3600000).toISOString()).first<{count:number}>();if((recent?.count||0)>=20)return Response.json({error:'You have saved several requests. Please try again later.'},{status:429});
- const id='AB-'+crypto.randomUUID().slice(0,8).toUpperCase();const createdAt=new Date().toISOString();await database().prepare('INSERT INTO requests (id,user_id,kind,status,payload,created_at) VALUES (?,?,?,?,?,?)').bind(id,user.id,body.kind,'saved-preview',JSON.stringify(p),createdAt).run();return Response.json({ok:true,id,status:'saved-preview',createdAt,message:'Your request is saved in this preview. No payment was taken and no supplier has been contacted.'},{status:201});}catch(e){return fail(e)}}
+import {ZodError} from 'zod';
+import {database, identity, sameOrigin, fail, HttpError, assertOwner} from '@/lib/server';
+import {prepareIntake} from '@/lib/request-validation';
+import {consumeIntakeAllowance} from '@/lib/intake-limits';
+
+const headers = {'Cache-Control': 'no-store, private'};
+const MAX_REQUEST_BYTES = 50000;
+async function readBody(request: Request) {
+  const length = request.headers.get('content-length');
+  if (length && Number(length) > MAX_REQUEST_BYTES) throw new HttpError(413, 'Please shorten your request.');
+  if (request.headers.get('content-type')?.toLowerCase().split(';')[0].trim() !== 'application/json') throw new HttpError(415, 'Send your enquiry as JSON.');
+  const reader = request.body?.getReader();
+  if (!reader) throw new HttpError(400, 'Your enquiry is empty.');
+  const chunks: Uint8Array[] = [];
+  let size = 0;
+  try {
+    while (true) {
+      const result = await reader.read();
+      if (result.done) break;
+      size += result.value.byteLength;
+      if (size > MAX_REQUEST_BYTES) {await reader.cancel();throw new HttpError(413, 'Please shorten your request.');}
+      chunks.push(result.value);
+    }
+  } finally {reader.releaseLock();}
+  const joined = new Uint8Array(size);
+  let offset = 0;for (const chunk of chunks) {joined.set(chunk, offset);offset += chunk.byteLength;}
+  try {return JSON.parse(new TextDecoder('utf-8', {fatal: true}).decode(joined));} catch {throw new HttpError(400, 'Your enquiry could not be read. Please check the form and try again.');}
+}
+
+export async function GET() {
+  try {
+    const user = await identity();
+    const rows = await database().prepare('SELECT id, kind, status, payload, created_at AS createdAt FROM requests WHERE user_id = ? ORDER BY created_at DESC, id DESC LIMIT 100').bind(user.id).all();
+    return Response.json({requests: rows.results}, {headers});
+  } catch (error) {return fail(error);}
+}
+
+export async function POST(request: Request) {
+  try {
+    sameOrigin(request);
+    const data = prepareIntake(await readBody(request));
+    const user = await identity();
+    assertOwner(request, user.id);
+    const db = database();
+    const allowance = await consumeIntakeAllowance(db, request, user.id);
+    if (!allowance.allowed) return Response.json({error: 'Several enquiries have been saved recently. Please try again later.'}, {status: 429, headers: {...headers, 'Retry-After': String(allowance.retryAfter)}});
+    const id = 'AB-' + crypto.randomUUID().toUpperCase();
+    const createdAt = new Date().toISOString();
+    const inserted = await db.prepare('INSERT INTO requests (id, user_id, kind, status, payload, created_at) SELECT ?, ?, ?, ?, ?, ? WHERE NOT EXISTS (SELECT 1 FROM guest_claims WHERE guest_id = ?)').bind(id, user.id, data.kind, 'new', JSON.stringify(data.payload), createdAt, user.id).run();
+    if (!inserted.meta.changes) throw new HttpError(409, 'Your sign-in changed. Reload Abode before saving again.', 'IDENTITY_CHANGED');
+    return Response.json({ok: true, id, status: 'new', createdAt, message: 'Your enquiry is saved for review. No payment was taken, no order was placed and no external messages were sent.'}, {status: 201, headers});
+  } catch (error) {
+    if (error instanceof ZodError) return Response.json({error: error.issues[0]?.message || 'Check the details in your enquiry.'}, {status: 400, headers});
+    return fail(error);
+  }
+}

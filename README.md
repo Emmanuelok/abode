@@ -11,8 +11,12 @@ Live site: **https://abode.eo-kingsford.workers.dev**. The GitHub-connected Clou
 - Persistent shopping bags, Ghana quotation forms, saved enquiries and contact details.
 - Room planner, inspiration, private gift lists and catalogue exports.
 - Browser-only supplier CSV/JSON validation (up to 10,000 records).
+- Photo navigation for all departments and collections, with desktop keyboard controls and mobile accordions.
+- Open Graph sharing images, route metadata, installable PWA and a private-data-safe offline fallback.
+- Google account registration/sign-in, cross-device saved selections, session review and sign-out (requires configured Google credentials).
+- Protected owner enquiry inbox, customer-visible statuses, audited staff updates and CSV export.
 
-The catalogue uses illustrative GHS prices. Requests are saved as preview enquiries; payments, supplier dispatch, live stock, fulfilment, merchant administration and notifications are not connected.
+The catalogue uses illustrative GHS prices. New requests enter the owner inbox for review; payments, supplier dispatch, live stock, fulfilment and outbound notifications are not connected.
 
 ## One hosting provider
 
@@ -22,13 +26,13 @@ All runtime services are in the same Cloudflare account:
 | --- | --- |
 | Frontend and API | Worker `abode` |
 | Primary product/editorial images, CSS and JS | Worker Static Assets |
-| Private shopping state and enquiries | D1 `abode-db` |
+| Accounts, sessions, private shopping state, enquiries and audit records | D1 `abode-db` |
 | Additional product gallery images | R2 `abode-gallery`, served through `/catalog/gallery/…` on the app origin |
 | Source and deployment trigger | GitHub `Emmanuelok/abode` → Cloudflare Workers Builds |
 
 No Vercel, Supabase, Amazon image hosting or ChatGPT authentication is required at runtime. Original source URLs remain as attribution references. See [catalogue attribution](docs/CATALOG_ATTRIBUTION.md).
 
-The independent site uses private, random, HttpOnly guest-session cookies. Saved items belong to the visitor's browser. Cross-device customer accounts require a separate authentication implementation; the retired ChatGPT sign-in button is removed, and untrusted ChatGPT identity headers are ignored.
+Visitors can browse with private, random, HttpOnly guest cookies. Google signs customers in through Better Auth; sessions and customer records live in Cloudflare D1. On sign-in, guest selections and enquiries transfer atomically to the account. Google is the identity provider, not another website host. Editable profile details and untrusted identity headers cannot grant staff access. See [authentication setup](docs/AUTHENTICATION.md).
 
 ## Development
 
@@ -39,6 +43,10 @@ pnpm install --frozen-lockfile
 pnpm build
 pnpm exec tsc --noEmit
 pnpm verify
+node scripts/verify-auth.mjs
+node scripts/verify-admin-inbox.mjs
+node scripts/verify-request-intake.mjs
+node scripts/verify-pwa.mjs
 pnpm start -- --port 8790
 ```
 
@@ -57,6 +65,7 @@ For a manual deployment of the same GitHub commit after Cloudflare authenticatio
 ```sh
 pnpm build
 pnpm verify
+pnpm db:migrate
 pnpm run deploy
 ```
 

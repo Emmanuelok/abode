@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /auth
+Disallow: /signin
+Disallow: /signup
+Disallow: /account
+Disallow: /admin
+Disallow: /cart
+Disallow: /checkout
+Disallow: /wishlist
+Disallow: /compare
+Disallow: /planner
+Disallow: /registry
+Disallow: /catalog-studio
+Disallow: /special-request
+Disallow: /offline.html
+
+Sitemap: https://abode.eo-kingsford.workers.dev/sitemap.xml

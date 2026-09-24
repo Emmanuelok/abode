@@ -7,6 +7,10 @@
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
   "preview_urls": false,
+  "vars": {
+    "AUTH_URL": "https://abode.eo-kingsford.workers.dev",
+    "ADMIN_EMAILS": "eo.kingsford@gmail.com"
+  },
   "d1_databases": [{
     "binding": "DB",
     "database_name": "abode-db",

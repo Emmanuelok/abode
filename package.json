@@ -14,12 +14,17 @@
     "db:generate": "drizzle-kit generate",
     "deploy": "wrangler deploy --config dist/server/wrangler.json",
     "db:migrate": "wrangler d1 migrations apply DB --remote --config wrangler.json",
-    "verify": "node scripts/verify-worker.mjs"
+    "verify": "node scripts/verify-worker.mjs",
+    "verify:auth": "node scripts/verify-auth.mjs",
+    "verify:inbox": "node scripts/verify-admin-inbox.mjs",
+    "verify:intake": "node scripts/verify-request-intake.mjs",
+    "verify:pwa": "node scripts/verify-pwa.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
     "@hookform/resolvers": "^5.7.1",
     "@shadcn/react": "^0.3.0",
+    "better-auth": "1.7.5",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "cmdk": "^1.1.1",

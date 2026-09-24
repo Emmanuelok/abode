@@ -1,5 +1,6 @@
 {
   "passed": [
+    "all 4 numbered database migrations applied",
     "same-origin R2 gallery reads",
     "catalog: 5357 products, 4-item pagination",
     "24 departments and 253 submenu collections: all populated",
@@ -13,6 +14,13 @@
     "invalid quantity rejected",
     "quote persistence and server-side price calculation",
     "quote records scoped to their session",
+    "compiled Worker validates native sessions and grants staff only to verified allowlisted identity, never profile data or forged headers/cookies",
+    "HTTP sign-in claim transfers cart/wishlist/enquiry exactly once, rotates old guest cookies and blocks reuse by another account",
+    "stale account-A tab cannot write private state or enquiries under account-B cookies; B remains unchanged",
+    "verified staff list and update enquiries with an audit record; customers, foreign origins and stale writes are denied",
+    "compiled OAuth routes enforce same-origin callbacks, emit no-store responses, and initiate Google with state and PKCE",
+    "revoked-session stale writes return IDENTITY_CHANGED without copying private account data into any guest row",
+    "compiled sign-out rejects CSRF, deletes the real session and prevents cookie replay without ending another user’s session",
     "complete catalog export",
     "homepage server response",
     "category route server response",
@@ -20,5 +28,5 @@
     "complete department directory renders",
     "direct product route does not render the homepage"
   ],
-  "timestamp": "2026-09-24T20:13:05.506Z"
+  "timestamp": "2026-09-24T20:54:55.773Z"
 }

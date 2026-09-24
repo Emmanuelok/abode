@@ -1,0 +1,1114 @@
+{
+  "departments": {
+    "living-room": {
+      "image": "/images/navigation/abo-b07b4d88dy.webp",
+      "count": 707
+    },
+    "bedroom": {
+      "image": "/images/navigation/abo-b075qdv244.webp",
+      "count": 367
+    },
+    "dining": {
+      "image": "/images/navigation/abo-b075ymxwzc.webp",
+      "count": 292
+    },
+    "outdoor": {
+      "image": "/images/navigation/abo-b000gxdwgu.webp",
+      "count": 412
+    },
+    "lighting": {
+      "image": "/images/navigation/abo-b07hk68bxk.webp",
+      "count": 481
+    },
+    "rugs": {
+      "image": "/images/navigation/abo-b0714mjl15.webp",
+      "count": 336
+    },
+    "decor": {
+      "image": "/images/navigation/abo-b0831ppzy6.webp",
+      "count": 481
+    },
+    "bedding": {
+      "image": "/images/navigation/abo-b0792h4hym.webp",
+      "count": 388
+    },
+    "bath": {
+      "image": "/images/navigation/abo-b0014cj270.webp",
+      "count": 213
+    },
+    "kitchen": {
+      "image": "/images/navigation/abo-b073q8p6cq.webp",
+      "count": 480
+    },
+    "appliances": {
+      "image": "/images/navigation/abo-b07drnlt3w.webp",
+      "count": 199
+    },
+    "storage": {
+      "image": "/images/navigation/abo-b07b8w8fhf.webp",
+      "count": 326
+    },
+    "office": {
+      "image": "/images/navigation/abo-b075z6ys29.webp",
+      "count": 190
+    },
+    "kids": {
+      "image": "/images/navigation/commons-baby-crib.webp",
+      "count": 155
+    },
+    "improvement": {
+      "image": "/images/navigation/abo-b07f2c7r19.webp",
+      "count": 227
+    },
+    "pet": {
+      "image": "/images/navigation/abo-b0172ir3z2.webp",
+      "count": 126
+    },
+    "seasonal": {
+      "image": "/images/navigation/abo-b07dw2ngdl.webp",
+      "count": 55
+    },
+    "window-treatments": {
+      "image": "/images/navigation/abo-b003qp2wji.webp",
+      "count": 116
+    },
+    "cleaning": {
+      "image": "/images/navigation/abo-b071l9qyty.webp",
+      "count": 156
+    },
+    "cooling": {
+      "image": "/images/navigation/abo-b07n6ktc5v.webp",
+      "count": 90
+    },
+    "fitness": {
+      "image": "/images/navigation/abo-b07fnhwt3z.webp",
+      "count": 86
+    },
+    "tools": {
+      "image": "/images/navigation/abo-b000ndlnr8.webp",
+      "count": 85
+    },
+    "entryway": {
+      "image": "/images/navigation/abo-b072zktsnx.webp",
+      "count": 204
+    },
+    "garden": {
+      "image": "/images/navigation/abo-b075hr7kvr.webp",
+      "count": 139
+    }
+  },
+  "collections": {
+    "living-room/sofas-sectionals": {
+      "image": "/images/navigation/abo-b07b4d88dy.webp",
+      "count": 116
+    },
+    "living-room/armchairs-accent-chairs": {
+      "image": "/images/navigation/abo-b07b4d8945.webp",
+      "count": 91
+    },
+    "living-room/recliners": {
+      "image": "/images/navigation/abo-b085gxhl6x.webp",
+      "count": 51
+    },
+    "living-room/ottomans-poufs": {
+      "image": "/images/navigation/abo-b07b4d6mbs.webp",
+      "count": 75
+    },
+    "living-room/benches": {
+      "image": "/images/navigation/abo-b072zktsnx.webp",
+      "count": 50
+    },
+    "living-room/sofa-beds": {
+      "image": "/images/navigation/abo-b07hyybhwj.webp",
+      "count": 41
+    },
+    "living-room/coffee-tables": {
+      "image": "/images/navigation/abo-b072zk2fz6.webp",
+      "count": 76
+    },
+    "living-room/side-tables": {
+      "image": "/images/navigation/abo-b072zkpk7j.webp",
+      "count": 56
+    },
+    "living-room/console-tables": {
+      "image": "/images/navigation/abo-b072zmt5sd.webp",
+      "count": 39
+    },
+    "living-room/tv-stands": {
+      "image": "/images/navigation/abo-b07hsg8dpz.webp",
+      "count": 23
+    },
+    "living-room/bookcases": {
+      "image": "/images/navigation/abo-b07b7j8ggs.webp",
+      "count": 30
+    },
+    "living-room/display-cabinets": {
+      "image": "/images/navigation/abo-b072zk8897.webp",
+      "count": 22
+    },
+    "living-room/accent-furniture": {
+      "image": "/images/navigation/abo-b07b7j5xsq.webp",
+      "count": 37
+    },
+    "bedroom/beds-bed-frames": {
+      "image": "/images/navigation/abo-b075qdv244.webp",
+      "count": 25
+    },
+    "bedroom/headboards": {
+      "image": "/images/navigation/abo-b075x2cvqk.webp",
+      "count": 72
+    },
+    "bedroom/nightstands": {
+      "image": "/images/navigation/abo-b07177355j.webp",
+      "count": 40
+    },
+    "bedroom/dressers": {
+      "image": "/images/navigation/abo-b071fjr479.webp",
+      "count": 45
+    },
+    "bedroom/wardrobes": {
+      "image": "/images/navigation/abo-b08521mz2d.webp",
+      "count": 20
+    },
+    "bedroom/bedroom-benches": {
+      "image": "/images/navigation/abo-b07b4sc9rp.webp",
+      "count": 2
+    },
+    "bedroom/mattresses": {
+      "image": "/images/navigation/abo-b01egrl1p0.webp",
+      "count": 29
+    },
+    "bedroom/mattress-toppers": {
+      "image": "/images/navigation/abo-b00b4eix28.webp",
+      "count": 19
+    },
+    "bedroom/pillows": {
+      "image": "/images/navigation/abo-b074vlcfnc.webp",
+      "count": 33
+    },
+    "bedroom/bed-bases": {
+      "image": "/images/navigation/abo-b07bhh2zvy.webp",
+      "count": 19
+    },
+    "bedroom/bedroom-sets": {
+      "image": "/images/navigation/abo-b07177355j.webp",
+      "count": 56
+    },
+    "bedroom/bed-linen": {
+      "image": "/images/navigation/abo-b07cv95zb2.webp",
+      "count": 59
+    },
+    "bedroom/dressing-tables": {
+      "image": "/images/navigation/abo-b07bl1nyc4.webp",
+      "count": 4
+    },
+    "dining/dining-tables": {
+      "image": "/images/navigation/abo-b075ymxwzc.webp",
+      "count": 76
+    },
+    "dining/dining-chairs": {
+      "image": "/images/navigation/abo-b075yq8q2k.webp",
+      "count": 77
+    },
+    "dining/dining-sets": {
+      "image": "/images/navigation/abo-b000w9f8hy.webp",
+      "count": 11
+    },
+    "dining/sideboards-buffets": {
+      "image": "/images/navigation/abo-b075z8628k.webp",
+      "count": 31
+    },
+    "dining/bar-stools": {
+      "image": "/images/navigation/abo-b07hsdps5h.webp",
+      "count": 74
+    },
+    "dining/bar-carts": {
+      "image": "/images/navigation/abo-b075ymn185.webp",
+      "count": 13
+    },
+    "dining/wine-racks": {
+      "image": "/images/navigation/abo-b075ynl7r3.webp",
+      "count": 14
+    },
+    "dining/kitchen-islands": {
+      "image": "/images/navigation/abo-b07b78lxz1.webp",
+      "count": 4
+    },
+    "dining/breakfast-tables": {
+      "image": "/images/navigation/abo-b075yq46kx.webp",
+      "count": 2
+    },
+    "outdoor/patio-seating": {
+      "image": "/images/navigation/abo-b000gxdwgu.webp",
+      "count": 39
+    },
+    "outdoor/outdoor-dining": {
+      "image": "/images/navigation/abo-b000gxdwgu.webp",
+      "count": 14
+    },
+    "outdoor/sun-loungers": {
+      "image": "/images/navigation/abo-b07k4p6pqz.webp",
+      "count": 16
+    },
+    "outdoor/hammocks": {
+      "image": "/images/navigation/abo-b076pprqph.webp",
+      "count": 14
+    },
+    "outdoor/outdoor-cushions": {
+      "image": "/images/navigation/abo-b07jkjp8md.webp",
+      "count": 55
+    },
+    "outdoor/outdoor-rugs": {
+      "image": "/images/navigation/abo-b07qjmfcvz.webp",
+      "count": 4
+    },
+    "outdoor/planters": {
+      "image": "/images/navigation/abo-b075hr7kvr.webp",
+      "count": 64
+    },
+    "outdoor/garden-tools": {
+      "image": "/images/navigation/abo-b000mcfmp4.webp",
+      "count": 21
+    },
+    "outdoor/shade-umbrellas": {
+      "image": "/images/navigation/abo-b000bixanu.webp",
+      "count": 33
+    },
+    "outdoor/grills": {
+      "image": "/images/navigation/abo-b000buqmii.webp",
+      "count": 35
+    },
+    "outdoor/outdoor-lighting": {
+      "image": "/images/navigation/abo-b07hk86x5v.webp",
+      "count": 57
+    },
+    "outdoor/garden-storage": {
+      "image": "/images/navigation/abo-b000h7fvsc.webp",
+      "count": 1
+    },
+    "outdoor/outdoor-accessories": {
+      "image": "/images/navigation/abo-b075hwdsc6.webp",
+      "count": 64
+    },
+    "lighting/table-lamps": {
+      "image": "/images/navigation/abo-b07hk68bxk.webp",
+      "count": 58
+    },
+    "lighting/floor-lamps": {
+      "image": "/images/navigation/abo-b07374k536.webp",
+      "count": 58
+    },
+    "lighting/pendant-lights": {
+      "image": "/images/navigation/abo-b07dtfbdth.webp",
+      "count": 36
+    },
+    "lighting/chandeliers": {
+      "image": "/images/navigation/abo-b071f6vv2t.webp",
+      "count": 42
+    },
+    "lighting/ceiling-lights": {
+      "image": "/images/navigation/abo-b07b4yrz1s.webp",
+      "count": 27
+    },
+    "lighting/wall-lights": {
+      "image": "/images/navigation/abo-b07dtfbczn.webp",
+      "count": 56
+    },
+    "lighting/desk-lamps": {
+      "image": "/images/navigation/abo-b07hk3hj6p.webp",
+      "count": 24
+    },
+    "lighting/outdoor-lights": {
+      "image": "/images/navigation/abo-b07hk5myhr.webp",
+      "count": 54
+    },
+    "lighting/light-bulbs": {
+      "image": "/images/navigation/abo-b07hk3pk6c.webp",
+      "count": 63
+    },
+    "lighting/led-strips": {
+      "image": "/images/navigation/abo-b07tv74p2g.webp",
+      "count": 5
+    },
+    "lighting/fans-lighting": {
+      "image": "/images/navigation/abo-b07hk3ptpx.webp",
+      "count": 22
+    },
+    "lighting/lighting-accessories": {
+      "image": "/images/navigation/abo-b07b4vsy7q.webp",
+      "count": 39
+    },
+    "rugs/area-rugs": {
+      "image": "/images/navigation/abo-b0714mjl15.webp",
+      "count": 162
+    },
+    "rugs/runners": {
+      "image": "/images/navigation/abo-b07121zwnn.webp",
+      "count": 100
+    },
+    "rugs/doormats": {
+      "image": "/images/navigation/abo-b07pwxj2sl.webp",
+      "count": 7
+    },
+    "rugs/outdoor-rugs": {
+      "image": "/images/navigation/abo-b07qjmfcvz.webp",
+      "count": 4
+    },
+    "rugs/bath-mats": {
+      "image": "/images/navigation/abo-b000omohyy.webp",
+      "count": 3
+    },
+    "rugs/kitchen-mats": {
+      "image": "/images/navigation/abo-b00oufx0yy.webp",
+      "count": 7
+    },
+    "rugs/rug-pads": {
+      "image": "/images/navigation/abo-b07v7g8l8y.webp",
+      "count": 2
+    },
+    "rugs/round-rugs": {
+      "image": "/images/navigation/abo-b07hsht9yc.webp",
+      "count": 13
+    },
+    "rugs/kids-rugs": {
+      "image": "/images/navigation/abo-b07b4sf23k.webp",
+      "count": 49
+    },
+    "rugs/natural-fibre-rugs": {
+      "image": "/images/navigation/abo-b07b4sdljm.webp",
+      "count": 39
+    },
+    "decor/vases": {
+      "image": "/images/navigation/abo-b0831ppzy6.webp",
+      "count": 22
+    },
+    "decor/decorative-objects": {
+      "image": "/images/navigation/abo-b073p1ckfh.webp",
+      "count": 14
+    },
+    "decor/candles-holders": {
+      "image": "/images/navigation/abo-b078jghzt9.webp",
+      "count": 58
+    },
+    "decor/artificial-plants": {
+      "image": "/images/navigation/abo-b07dw2ngdl.webp",
+      "count": 11
+    },
+    "decor/clocks": {
+      "image": "/images/navigation/abo-b07b8nzqf3.webp",
+      "count": 41
+    },
+    "decor/decorative-bowls": {
+      "image": "/images/navigation/abo-b075hwdsdk.webp",
+      "count": 1
+    },
+    "decor/mirrors": {
+      "image": "/images/navigation/abo-b071dqrxdr.webp",
+      "count": 58
+    },
+    "decor/wall-art": {
+      "image": "/images/navigation/abo-b073nzppsx.webp",
+      "count": 44
+    },
+    "decor/picture-frames": {
+      "image": "/images/navigation/abo-b073nzgljx.webp",
+      "count": 122
+    },
+    "decor/curtains": {
+      "image": "/images/navigation/abo-b0153tojsg.webp",
+      "count": 47
+    },
+    "decor/blinds": {
+      "image": "/images/navigation/abo-b0749rnyj6.webp",
+      "count": 11
+    },
+    "decor/curtain-hardware": {
+      "image": "/images/navigation/abo-b01n0mji9o.webp",
+      "count": 52
+    },
+    "bedding/duvet-covers": {
+      "image": "/images/navigation/abo-b0792h4hym.webp",
+      "count": 19
+    },
+    "bedding/comforters-quilts": {
+      "image": "/images/navigation/abo-b00bneqcko.webp",
+      "count": 26
+    },
+    "bedding/sheet-sets": {
+      "image": "/images/navigation/abo-b00q7o9lk8.webp",
+      "count": 53
+    },
+    "bedding/bedspreads": {
+      "image": "/images/navigation/abo-b003s3rf3q.webp",
+      "count": 18
+    },
+    "bedding/pillowcases": {
+      "image": "/images/navigation/abo-b07cv95zb2.webp",
+      "count": 43
+    },
+    "bedding/throws-blankets": {
+      "image": "/images/navigation/abo-b075x3bj4l.webp",
+      "count": 68
+    },
+    "bedding/decorative-pillows": {
+      "image": "/images/navigation/abo-b074vkvp97.webp",
+      "count": 58
+    },
+    "bedding/mattress-protectors": {
+      "image": "/images/navigation/abo-b000w7v10o.webp",
+      "count": 28
+    },
+    "bedding/duvet-inserts": {
+      "image": "/images/navigation/abo-b07m8fbs3g.webp",
+      "count": 13
+    },
+    "bedding/bed-skirts": {
+      "image": "/images/navigation/abo-b003qp2zjk.webp",
+      "count": 14
+    },
+    "bedding/bedding-essentials": {
+      "image": "/images/navigation/abo-b000hs2wfg.webp",
+      "count": 34
+    },
+    "bedding/pillows": {
+      "image": "/images/navigation/abo-b074vlcfnc.webp",
+      "count": 14
+    },
+    "bath/towels": {
+      "image": "/images/navigation/abo-b0014cj270.webp",
+      "count": 61
+    },
+    "bath/shower-curtains": {
+      "image": "/images/navigation/abo-b0097bgcau.webp",
+      "count": 5
+    },
+    "bath/bath-accessories": {
+      "image": "/images/navigation/abo-b073q4wmkh.webp",
+      "count": 42
+    },
+    "bath/bath-mats": {
+      "image": "/images/navigation/abo-b000omohyy.webp",
+      "count": 23
+    },
+    "bath/laundry-hampers": {
+      "image": "/images/navigation/abo-b07hmsfn8h.webp",
+      "count": 25
+    },
+    "bath/bathroom-cabinets": {
+      "image": "/images/navigation/abo-b07rmjpjm6.webp",
+      "count": 3
+    },
+    "bath/vanities": {
+      "image": "/images/navigation/abo-b07vvjqcqb.webp",
+      "count": 1
+    },
+    "bath/bathroom-mirrors": {
+      "image": "/images/navigation/abo-b07jm714d5.webp",
+      "count": 4
+    },
+    "bath/shower-caddies": {
+      "image": "/images/navigation/abo-b07pgmssp7.webp",
+      "count": 22
+    },
+    "bath/toilet-accessories": {
+      "image": "/images/navigation/abo-b0775xkm8k.webp",
+      "count": 28
+    },
+    "kitchen/cookware": {
+      "image": "/images/navigation/abo-b073q8p6cq.webp",
+      "count": 40
+    },
+    "kitchen/bakeware": {
+      "image": "/images/navigation/abo-b00vgdizam.webp",
+      "count": 16
+    },
+    "kitchen/kitchen-utensils": {
+      "image": "/images/navigation/abo-b000m4yeds.webp",
+      "count": 37
+    },
+    "kitchen/knives-boards": {
+      "image": "/images/navigation/abo-b0009boe8e.webp",
+      "count": 32
+    },
+    "kitchen/food-storage": {
+      "image": "/images/navigation/abo-b07gyll7m5.webp",
+      "count": 31
+    },
+    "kitchen/kitchen-organisers": {
+      "image": "/images/navigation/abo-b078jhf6pf.webp",
+      "count": 12
+    },
+    "kitchen/dinnerware": {
+      "image": "/images/navigation/abo-b07qb784fc.webp",
+      "count": 43
+    },
+    "kitchen/glassware": {
+      "image": "/images/navigation/abo-b07bg69mrw.webp",
+      "count": 38
+    },
+    "kitchen/cutlery": {
+      "image": "/images/navigation/abo-b0736s3kk3.webp",
+      "count": 34
+    },
+    "kitchen/serveware": {
+      "image": "/images/navigation/abo-b078jm52vn.webp",
+      "count": 32
+    },
+    "kitchen/drinkware": {
+      "image": "/images/navigation/abo-b000fvzk40.webp",
+      "count": 55
+    },
+    "kitchen/table-linen": {
+      "image": "/images/navigation/abo-b08b1l6wc9.webp",
+      "count": 15
+    },
+    "kitchen/kitchen-essentials": {
+      "image": "/images/navigation/abo-b07b83kvgh.webp",
+      "count": 95
+    },
+    "appliances/blenders": {
+      "image": "/images/navigation/abo-b07drnlt3w.webp",
+      "count": 18
+    },
+    "appliances/kettles": {
+      "image": "/images/navigation/abo-b013r5tgiq.webp",
+      "count": 11
+    },
+    "appliances/coffee-makers": {
+      "image": "/images/navigation/abo-b013r5uaoa.webp",
+      "count": 14
+    },
+    "appliances/toasters": {
+      "image": "/images/navigation/abo-b072p11h8l.webp",
+      "count": 6
+    },
+    "appliances/air-fryers": {
+      "image": "/images/navigation/abo-b07w668ksn.webp",
+      "count": 4
+    },
+    "appliances/microwaves": {
+      "image": "/images/navigation/abo-b07rtc8wsd.webp",
+      "count": 7
+    },
+    "appliances/fans": {
+      "image": "/images/navigation/abo-b07hk3ptpx.webp",
+      "count": 53
+    },
+    "appliances/air-purifiers": {
+      "image": "/images/navigation/abo-b07t2c9btt.webp",
+      "count": 2
+    },
+    "appliances/vacuums": {
+      "image": "/images/navigation/abo-b071l9qyty.webp",
+      "count": 14
+    },
+    "appliances/irons": {
+      "image": "/images/navigation/abo-b071x43ybb.webp",
+      "count": 3
+    },
+    "appliances/fridges": {
+      "image": "/images/navigation/abo-b07cg8c3vk.webp",
+      "count": 7
+    },
+    "appliances/washing-machines": {
+      "image": "/images/navigation/abo-b07v3sh9w8.webp",
+      "count": 11
+    },
+    "appliances/home-appliances": {
+      "image": "/images/navigation/abo-b071g5knxk.webp",
+      "count": 50
+    },
+    "storage/storage-baskets": {
+      "image": "/images/navigation/abo-b07b8w8fhf.webp",
+      "count": 27
+    },
+    "storage/storage-bins": {
+      "image": "/images/navigation/abo-b072zp9xl1.webp",
+      "count": 96
+    },
+    "storage/shelving": {
+      "image": "/images/navigation/abo-b07b7j8ggs.webp",
+      "count": 32
+    },
+    "storage/shoe-storage": {
+      "image": "/images/navigation/abo-b07227pwvp.webp",
+      "count": 20
+    },
+    "storage/coat-racks": {
+      "image": "/images/navigation/abo-b01mrt550v.webp",
+      "count": 36
+    },
+    "storage/closet-organisers": {
+      "image": "/images/navigation/abo-b00fxnabzs.webp",
+      "count": 36
+    },
+    "storage/laundry-storage": {
+      "image": "/images/navigation/abo-b01ejpzjno.webp",
+      "count": 28
+    },
+    "storage/garage-storage": {
+      "image": "/images/navigation/abo-b086ksff9b.webp",
+      "count": 7
+    },
+    "storage/utility-carts": {
+      "image": "/images/navigation/abo-b075yptf8n.webp",
+      "count": 17
+    },
+    "storage/drawer-organisers": {
+      "image": "/images/navigation/abo-b07hsg7ktn.webp",
+      "count": 27
+    },
+    "storage/moving-supplies": {
+      "image": "/images/navigation/abo-b014vbhpmy.webp",
+      "count": 6
+    },
+    "storage/storage-bags": {
+      "image": "/images/navigation/abo-b073v2x86f.webp",
+      "count": 1
+    },
+    "office/desks": {
+      "image": "/images/navigation/abo-b075z6ys29.webp",
+      "count": 39
+    },
+    "office/office-chairs": {
+      "image": "/images/navigation/abo-b075zbw1px.webp",
+      "count": 38
+    },
+    "office/filing-cabinets": {
+      "image": "/images/navigation/abo-b07b7jy9c5.webp",
+      "count": 11
+    },
+    "office/office-bookcases": {
+      "image": "/images/navigation/abo-b07b7j8ggs.webp",
+      "count": 11
+    },
+    "office/desk-converters": {
+      "image": "/images/navigation/abo-b087gy33cp.webp",
+      "count": 3
+    },
+    "office/desk-organisers": {
+      "image": "/images/navigation/abo-b07ykvw9bs.webp",
+      "count": 15
+    },
+    "office/desk-lamps": {
+      "image": "/images/navigation/abo-b07hk3hj6p.webp",
+      "count": 4
+    },
+    "office/monitor-stands": {
+      "image": "/images/navigation/abo-b01mz81skb.webp",
+      "count": 5
+    },
+    "office/office-accessories": {
+      "image": "/images/navigation/abo-b003qtd4y6.webp",
+      "count": 55
+    },
+    "office/whiteboards": {
+      "image": "/images/navigation/abo-b07k928bx5.webp",
+      "count": 9
+    },
+    "kids/cots-cribs": {
+      "image": "/images/navigation/commons-baby-crib.webp",
+      "count": 3
+    },
+    "kids/changing-tables": {
+      "image": "/images/navigation/commons-changing-table-cc0.webp",
+      "count": 1
+    },
+    "kids/nursery-chairs": {
+      "image": "/images/navigation/abo-b0853vfwyx.webp",
+      "count": 4
+    },
+    "kids/baby-bedding": {
+      "image": "/images/navigation/abo-b0035eqkjs.webp",
+      "count": 10
+    },
+    "kids/nursery-storage": {
+      "image": "/images/navigation/abo-b0834wv2xl.webp",
+      "count": 1
+    },
+    "kids/kids-beds": {
+      "image": "/images/navigation/commons-toddler-bed.webp",
+      "count": 1
+    },
+    "kids/kids-tables-chairs": {
+      "image": "/images/navigation/abo-b004y15djo.webp",
+      "count": 17
+    },
+    "kids/toy-storage": {
+      "image": "/images/navigation/abo-b07fjwrkcj.webp",
+      "count": 12
+    },
+    "kids/play-mats": {
+      "image": "/images/navigation/abo-b01mxdsjgx.webp",
+      "count": 2
+    },
+    "kids/kids-decor": {
+      "image": "/images/navigation/abo-b000wcw4fu.webp",
+      "count": 32
+    },
+    "kids/kids-rugs": {
+      "image": "/images/navigation/abo-b07b4sf23k.webp",
+      "count": 49
+    },
+    "kids/active-play": {
+      "image": "/images/navigation/abo-b07tf8x3ys.webp",
+      "count": 1
+    },
+    "kids/kids-bedding": {
+      "image": "/images/navigation/abo-b0028n6sda.webp",
+      "count": 22
+    },
+    "improvement/faucets": {
+      "image": "/images/navigation/abo-b07f2c7r19.webp",
+      "count": 25
+    },
+    "improvement/sinks": {
+      "image": "/images/navigation/abo-b07vvjqcqb.webp",
+      "count": 1
+    },
+    "improvement/showers": {
+      "image": "/images/navigation/abo-b07f288z1b.webp",
+      "count": 17
+    },
+    "improvement/bathroom-hardware": {
+      "image": "/images/navigation/abo-b0775ypj5c.webp",
+      "count": 33
+    },
+    "improvement/door-hardware": {
+      "image": "/images/navigation/abo-b07gf4tmwl.webp",
+      "count": 26
+    },
+    "improvement/cabinet-hardware": {
+      "image": "/images/navigation/abo-b01n5rjxs7.webp",
+      "count": 22
+    },
+    "improvement/wallpaper": {
+      "image": "/images/navigation/commons-morris-trellis.webp",
+      "count": 1
+    },
+    "improvement/flooring": {
+      "image": "/images/navigation/abo-b07gxfdbq5.webp",
+      "count": 3
+    },
+    "improvement/tiles": {
+      "image": "/images/navigation/abo-b07gxfdbq5.webp",
+      "count": 3
+    },
+    "improvement/tools": {
+      "image": "/images/navigation/abo-b000ndlnr8.webp",
+      "count": 59
+    },
+    "improvement/smart-home": {
+      "image": "/images/navigation/abo-b082xmrgzg.webp",
+      "count": 1
+    },
+    "improvement/electrical-accessories": {
+      "image": "/images/navigation/abo-b00tp1c1uc.webp",
+      "count": 39
+    },
+    "pet/pet-beds": {
+      "image": "/images/navigation/abo-b0172ir3z2.webp",
+      "count": 29
+    },
+    "pet/pet-furniture": {
+      "image": "/images/navigation/abo-b07fvytjdk.webp",
+      "count": 11
+    },
+    "pet/cat-trees": {
+      "image": "/images/navigation/abo-b07fvytjdk.webp",
+      "count": 27
+    },
+    "pet/pet-crates": {
+      "image": "/images/navigation/abo-b00qavnodi.webp",
+      "count": 35
+    },
+    "pet/pet-bowls": {
+      "image": "/images/navigation/abo-b07jwgpq5w.webp",
+      "count": 17
+    },
+    "pet/pet-storage": {
+      "image": "/images/navigation/abo-b01dop5l4m.webp",
+      "count": 3
+    },
+    "pet/pet-gates": {
+      "image": "/images/navigation/abo-b07hrz9ql6.webp",
+      "count": 1
+    },
+    "pet/pet-accessories": {
+      "image": "/images/navigation/abo-b0106v1y3e.webp",
+      "count": 12
+    },
+    "seasonal/party-decor": {
+      "image": "/images/navigation/abo-b07dw2ngdl.webp",
+      "count": 2
+    },
+    "seasonal/festive-lighting": {
+      "image": "/images/navigation/abo-b07trm8wvp.webp",
+      "count": 19
+    },
+    "seasonal/seasonal-decor": {
+      "image": "/images/navigation/abo-b07fp67kxy.webp",
+      "count": 3
+    },
+    "seasonal/wreaths": {
+      "image": "/images/navigation/commons-cork-wreath.webp",
+      "count": 1
+    },
+    "seasonal/gift-ideas": {
+      "image": "/images/navigation/abo-b07dnh84wx.webp",
+      "count": 1
+    },
+    "seasonal/hosting-essentials": {
+      "image": "/images/navigation/abo-b078jm52vn.webp",
+      "count": 28
+    },
+    "seasonal/gift-wrapping": {
+      "image": "/images/navigation/abo-b07gktfvpj.webp",
+      "count": 1
+    },
+    "seasonal/wedding-decor": {
+      "image": "/images/navigation/abo-b07dw2ngdl.webp",
+      "count": 2
+    },
+    "window-treatments/curtains-drapes": {
+      "image": "/images/navigation/abo-b003qp2wji.webp",
+      "count": 54
+    },
+    "window-treatments/blackout-curtains": {
+      "image": "/images/navigation/abo-b0153tojsg.webp",
+      "count": 34
+    },
+    "window-treatments/blinds": {
+      "image": "/images/navigation/abo-b0749rnyj6.webp",
+      "count": 10
+    },
+    "window-treatments/curtain-rods": {
+      "image": "/images/navigation/abo-b01n0mji9o.webp",
+      "count": 31
+    },
+    "window-treatments/curtain-hardware": {
+      "image": "/images/navigation/abo-b07mnbrrnv.webp",
+      "count": 20
+    },
+    "window-treatments/curtain-accessories": {
+      "image": "/images/navigation/abo-b0757zgjqq.webp",
+      "count": 21
+    },
+    "window-treatments/curtains": {
+      "image": "/images/navigation/abo-b088b7qljj.webp",
+      "count": 19
+    },
+    "cleaning/vacuums": {
+      "image": "/images/navigation/abo-b071l9qyty.webp",
+      "count": 12
+    },
+    "cleaning/mops-brooms": {
+      "image": "/images/navigation/abo-b07tgjtp6k.webp",
+      "count": 23
+    },
+    "cleaning/brushes-sponges": {
+      "image": "/images/navigation/abo-b07yczclmj.webp",
+      "count": 2
+    },
+    "cleaning/cleaning-supplies": {
+      "image": "/images/navigation/abo-b07hg2nlxd.webp",
+      "count": 22
+    },
+    "cleaning/bins-recycling": {
+      "image": "/images/navigation/abo-b07fqhd4f5.webp",
+      "count": 19
+    },
+    "cleaning/washing-machines": {
+      "image": "/images/navigation/abo-b07v3sh9w8.webp",
+      "count": 11
+    },
+    "cleaning/irons": {
+      "image": "/images/navigation/abo-b071x43ybb.webp",
+      "count": 3
+    },
+    "cleaning/laundry-hampers": {
+      "image": "/images/navigation/abo-b07hmsfn8h.webp",
+      "count": 25
+    },
+    "cleaning/drying-racks": {
+      "image": "/images/navigation/abo-b01ejpzjno.webp",
+      "count": 10
+    },
+    "cleaning/laundry-essentials": {
+      "image": "/images/navigation/abo-b07fqn7lf2.webp",
+      "count": 20
+    },
+    "cleaning/brooms": {
+      "image": "/images/navigation/abo-b07v1n548d.webp",
+      "count": 1
+    },
+    "cleaning/laundry-bags": {
+      "image": "/images/navigation/abo-b07cvc12pw.webp",
+      "count": 3
+    },
+    "cleaning/mops-buckets": {
+      "image": "/images/navigation/abo-b07tgjtp6k.webp",
+      "count": 2
+    },
+    "cleaning/vacuum-bags-filters": {
+      "image": "/images/navigation/abo-b08283mjh8.webp",
+      "count": 6
+    },
+    "cooling/air-conditioners": {
+      "image": "/images/navigation/abo-b07n6ktc5v.webp",
+      "count": 12
+    },
+    "cooling/air-coolers": {
+      "image": "/images/navigation/abo-b07t2c9btt.webp",
+      "count": 1
+    },
+    "cooling/ceiling-fans": {
+      "image": "/images/navigation/abo-b07hk3ptpx.webp",
+      "count": 24
+    },
+    "cooling/portable-fans": {
+      "image": "/images/navigation/abo-b07hk3ptpx.webp",
+      "count": 53
+    },
+    "cooling/air-purifiers": {
+      "image": "/images/navigation/abo-b07t2c9btt.webp",
+      "count": 2
+    },
+    "cooling/humidifiers": {
+      "image": "/images/navigation/abo-b07v9nk92y.webp",
+      "count": 14
+    },
+    "cooling/dehumidifiers": {
+      "image": "/images/navigation/abo-b07xmrcxj7.webp",
+      "count": 2
+    },
+    "cooling/heaters": {
+      "image": "/images/navigation/abo-b07jw45hh3.webp",
+      "count": 7
+    },
+    "cooling/cooling-accessories": {
+      "image": "/images/navigation/abo-b00r2s3o2e.webp",
+      "count": 2
+    },
+    "cooling/fans": {
+      "image": "/images/navigation/abo-b07dcqznsn.webp",
+      "count": 21
+    },
+    "fitness/weights-dumbbells": {
+      "image": "/images/navigation/abo-b07fnhwt3z.webp",
+      "count": 20
+    },
+    "fitness/resistance-bands": {
+      "image": "/images/navigation/abo-b07d5592fs.webp",
+      "count": 18
+    },
+    "fitness/benches-training": {
+      "image": "/images/navigation/abo-b07rgvhyd4.webp",
+      "count": 8
+    },
+    "fitness/yoga-exercise-mats": {
+      "image": "/images/navigation/abo-b00r3mzsb4.webp",
+      "count": 21
+    },
+    "fitness/foam-rollers-recovery": {
+      "image": "/images/navigation/abo-b07bh1tvmy.webp",
+      "count": 19
+    },
+    "tools/hand-tools": {
+      "image": "/images/navigation/abo-b000ndlnr8.webp",
+      "count": 33
+    },
+    "tools/power-tools": {
+      "image": "/images/navigation/abo-b000hdmu9e.webp",
+      "count": 1
+    },
+    "tools/tool-storage": {
+      "image": "/images/navigation/abo-b01gudo2s6.webp",
+      "count": 4
+    },
+    "tools/painting-supplies": {
+      "image": "/images/navigation/abo-b07dzxy4wz.webp",
+      "count": 1
+    },
+    "tools/ladders-steps": {
+      "image": "/images/navigation/abo-b07qm8c89m.webp",
+      "count": 25
+    },
+    "tools/safes": {
+      "image": "/images/navigation/abo-b00ug9hb1q.webp",
+      "count": 8
+    },
+    "tools/extension-leads-power-strips": {
+      "image": "/images/navigation/abo-b00tp1c1uc.webp",
+      "count": 13
+    },
+    "tools/ladders-step-stools": {
+      "image": "/images/navigation/abo-b07qm8c89m.webp",
+      "count": 10
+    },
+    "entryway/console-tables": {
+      "image": "/images/navigation/abo-b072zktsnx.webp",
+      "count": 33
+    },
+    "entryway/entryway-benches": {
+      "image": "/images/navigation/abo-b07b4sc9rp.webp",
+      "count": 17
+    },
+    "entryway/hallway-runners": {
+      "image": "/images/navigation/abo-b07121zwnn.webp",
+      "count": 95
+    },
+    "entryway/doormats": {
+      "image": "/images/navigation/abo-b07pwxj2sl.webp",
+      "count": 7
+    },
+    "entryway/coat-hooks-racks": {
+      "image": "/images/navigation/abo-b01mrt550v.webp",
+      "count": 32
+    },
+    "entryway/shoe-storage": {
+      "image": "/images/navigation/abo-b07227pwvp.webp",
+      "count": 20
+    },
+    "entryway/benches": {
+      "image": "/images/navigation/abo-b07dbb7fn6.webp",
+      "count": 13
+    },
+    "entryway/coat-racks": {
+      "image": "/images/navigation/abo-b07wd2fy7r.webp",
+      "count": 19
+    },
+    "garden/planters-pots": {
+      "image": "/images/navigation/abo-b075hr7kvr.webp",
+      "count": 68
+    },
+    "garden/garden-tools": {
+      "image": "/images/navigation/abo-b000mcfmp4.webp",
+      "count": 21
+    },
+    "garden/garden-storage": {
+      "image": "/images/navigation/abo-b000h7fvsc.webp",
+      "count": 1
+    },
+    "garden/solar-garden-lights": {
+      "image": "/images/navigation/abo-b000l9iffc.webp",
+      "count": 10
+    },
+    "garden/shade-canopies": {
+      "image": "/images/navigation/abo-b008u4qi18.webp",
+      "count": 21
+    },
+    "garden/garden-lighting": {
+      "image": "/images/navigation/abo-b07hk86snp.webp",
+      "count": 20
+    },
+    "garden/planters": {
+      "image": "/images/navigation/abo-b07s6bcr66.webp",
+      "count": 19
+    },
+    "garden/shade-umbrellas": {
+      "image": "/images/navigation/abo-b07yztlj26.webp",
+      "count": 1
+    }
+  }
+}
