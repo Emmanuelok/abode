@@ -69,4 +69,4 @@ Commercial-launch dependencies above are unchanged. Verification does not establ
 
 
 ## Current department expansion
-The reference collection now contains 5,357 unique named listings, 24 departments, and 253 menu collections, all populated. See CATALOG-EXPANSION.md and the generated verification reports for the current validation scope. The cloud-browser preview became unavailable during this revision; production Worker integration and asset validation are the publication gates.
+The reference collection now contains 5,357 unique named listings, 24 departments, and 253 menu collections, all populated. See CATALOG-EXPANSION.md and the generated verification reports for the current validation scope. The initial preview interruption was resolved by packing the server catalog. Final desktop and 390px mobile checks passed for quick view, add-to-bag confirmation, pagination, sorting and mobile price filtering. Production Worker integration covers all 253 submenu routes.

@@ -1,3 +1,4 @@
+import covers from './catalog-covers.json';
 import packed from './catalog-packed.txt?raw';
 import {gunzipSync} from 'node:zlib';
 import {Buffer} from 'node:buffer';
@@ -13,6 +14,7 @@ const subcategoryImages:Record<string,string>={};
 export const productCollections=(p:Product)=>[...new Set([p.department+'/'+slugify(p.subcategory),...(p.collections||[])])];
 const collectionIndex=new Map(products.map(p=>[p.id,productCollections(p)]));
 for(const p of products){const routes=collectionIndex.get(p.id)!;for(const dept of new Set(routes.map(r=>r.split('/')[0]))){departmentCounts[dept]=(departmentCounts[dept]||0)+1;if(!departmentImages[dept])departmentImages[dept]=p.image}for(const key of routes){subcategoryCounts[key]=(subcategoryCounts[key]||0)+1;if(!subcategoryImages[key])subcategoryImages[key]=p.image}}
+for(const [route,id] of Object.entries(covers)){const product=byId.get(id);if(product&&collectionIndex.get(id)?.includes(route))subcategoryImages[route]=product.image}
 export function queryCatalog(params:URLSearchParams){
  const id=params.get('id');if(id)return {product:productById(id)||null,related:products.filter(p=>p.id!==id&&p.subcategory===productById(id)?.subcategory).slice(0,8)};
  const ids=params.get('ids');if(params.has('ids'))return {items:(ids||'').split(',').slice(0,150).map(productById).filter(Boolean)};

@@ -15,17 +15,17 @@
     "garden": 139,
     "dining": 292,
     "office": 190,
-    "kitchen": 481,
+    "kitchen": 480,
     "seasonal": 55,
     "kids": 155,
-    "appliances": 199,
     "cooling": 90,
+    "appliances": 199,
     "bath": 213,
     "improvement": 227,
     "tools": 85,
     "window-treatments": 116,
     "pet": 126,
-    "cleaning": 155,
+    "cleaning": 156,
     "fitness": 86
   }
 }

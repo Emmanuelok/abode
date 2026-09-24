@@ -12,7 +12,7 @@ export const departmentStyle:Record<string,{image:string;tone:string;eyebrow:str
  'entryway':{image:'/images/living-room.webp',tone:'#8a5b42',eyebrow:'A WARM WELCOME HOME'},
  'cleaning':{image:'/images/kitchen-edit.webp',tone:'#58706b',eyebrow:'A FRESH START, EVERY DAY'},
  'cooling':{image:'/images/living-room.webp',tone:'#496b75',eyebrow:'MAKE YOURSELF COMFORTABLE'},
- 'fitness':{image:'/images/office-edit.webp',tone:'#796553',eyebrow:'ROOM TO MOVE'},
- 'tools':{image:'/images/office-edit.webp',tone:'#756650',eyebrow:'MAKE YOUR NEXT PROJECT HAPPEN'}
+ 'fitness':{image:'',tone:'#796553',eyebrow:'ROOM TO MOVE'},
+ 'tools':{image:'',tone:'#756650',eyebrow:'MAKE YOUR NEXT PROJECT HAPPEN'}
 };
 export function getDepartmentStyle(slug?:string){return departmentStyle[slug||'']||{image:'',tone:'#89654e',eyebrow:'THE DETAILS MAKE IT YOURS'}}

@@ -14,6 +14,16 @@
     "Bookcases": 30,
     "TV Stands": 23
   },
+  "entryway": {
+    "Hallway Runners": 95,
+    "Console Tables": 33,
+    "Coat Hooks & Racks": 32,
+    "Entryway Benches": 17,
+    "Benches": 13,
+    "Doormats": 7,
+    "Coat Racks": 19,
+    "Shoe Storage": 20
+  },
   "rugs": {
     "Runners": 100,
     "Area Rugs": 162,
@@ -25,16 +35,6 @@
     "Outdoor Rugs": 4,
     "Doormats": 7,
     "Rug Pads": 2
-  },
-  "entryway": {
-    "Hallway Runners": 95,
-    "Console Tables": 33,
-    "Coat Hooks & Racks": 32,
-    "Entryway Benches": 17,
-    "Benches": 13,
-    "Doormats": 7,
-    "Coat Racks": 19,
-    "Shoe Storage": 20
   },
   "bedroom": {
     "Nightstands": 40,
@@ -124,8 +124,8 @@
     "Outdoor Cushions": 55,
     "Shade & Umbrellas": 33,
     "Grills": 35,
-    "Patio Seating": 39,
     "Outdoor Dining": 14,
+    "Patio Seating": 39,
     "Garden Tools": 21,
     "Hammocks": 14,
     "Sun Loungers": 16,
@@ -162,12 +162,12 @@
     "Dinnerware": 43,
     "Knives & Boards": 32,
     "Drinkware": 55,
-    "Kitchen Utensils": 35,
+    "Kitchen Utensils": 37,
     "Glassware": 38,
-    "Food Storage": 33,
     "Bakeware": 16,
-    "Cookware": 41,
     "Cutlery": 34,
+    "Cookware": 40,
+    "Food Storage": 31,
     "Table Linen": 15
   },
   "seasonal": {
@@ -211,16 +211,16 @@
     "Air Purifiers": 2
   },
   "cooling": {
-    "Ceiling Fans": 24,
     "Portable Fans": 53,
+    "Ceiling Fans": 24,
     "Air Conditioners": 12,
     "Humidifiers": 14,
     "Dehumidifiers": 2,
     "Fans": 21,
     "Cooling Accessories": 2,
     "Heaters": 7,
-    "Air Coolers": 1,
-    "Air Purifiers": 2
+    "Air Purifiers": 2,
+    "Air Coolers": 1
   },
   "bath": {
     "Bathroom Mirrors": 4,
@@ -252,8 +252,8 @@
     "Hand Tools": 33,
     "Extension Leads & Power Strips": 13,
     "Safes": 8,
-    "Ladders & Steps": 25,
     "Ladders & Step Stools": 10,
+    "Ladders & Steps": 25,
     "Painting Supplies": 1,
     "Power Tools": 1,
     "Tool Storage": 4
@@ -271,8 +271,8 @@
     "Pet Crates": 35,
     "Pet Accessories": 12,
     "Pet Beds": 29,
-    "Pet Furniture": 11,
     "Cat Trees": 27,
+    "Pet Furniture": 11,
     "Pet Gates": 1,
     "Pet Bowls": 17,
     "Pet Storage": 3
@@ -281,6 +281,7 @@
     "Drying Racks": 10,
     "Vacuums": 12,
     "Laundry Bags": 3,
+    "Cleaning Supplies": 22,
     "Laundry Hampers": 25,
     "Mops & Buckets": 2,
     "Mops & Brooms": 23,
@@ -290,7 +291,6 @@
     "Washing Machines": 11,
     "Bins & Recycling": 19,
     "Brushes & Sponges": 2,
-    "Cleaning Supplies": 21,
     "Laundry Essentials": 20
   },
   "fitness": {

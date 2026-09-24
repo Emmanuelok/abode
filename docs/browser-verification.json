@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-24",
+  "desktop": [
+    "kitchen collection imagery and product loading",
+    "quick view modal",
+    "add to bag and confirmation drawer",
+    "pagination shows 25\u201348 on page 2",
+    "price sort ascending",
+    "no horizontal page overflow"
+  ],
+  "mobile_width": 390,
+  "mobile": [
+    "fitness department renders at 390px",
+    "responsive filter drawer opens",
+    "maximum guide price 500 returns 39 matches",
+    "saved bag persists across pages",
+    "mobile layout visually inspected"
+  ],
+  "all_route_coverage": "See worker-verification.json: 24 departments and 253 collections",
+  "catalog_images": "See catalog-verification.json: all 5357 images decode; unique file hashes"
+}
