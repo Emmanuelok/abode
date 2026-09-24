@@ -48,14 +48,14 @@ pnpm exec wrangler d1 migrations apply DB --local --config wrangler.json --persi
 
 ## Deployment
 
-Cloudflare Workers Builds must track `main` of `Emmanuelok/abode`. Build with `pnpm build`; deploy with `pnpm deploy`. Keep preview deployments disabled. The deployment uses the generated `dist/server/wrangler.json`; the source configuration is `wrangler.json`.
+Cloudflare Workers Builds must track `main` of `Emmanuelok/abode`. Build with `pnpm build`; deploy with `pnpm run deploy`. Keep preview deployments disabled. The deployment uses the generated `dist/server/wrangler.json`; the source configuration is `wrangler.json`.
 
 For a manual deployment of the same GitHub commit after Cloudflare authentication:
 
 ```sh
 pnpm build
 pnpm verify
-pnpm deploy
+pnpm run deploy
 ```
 
 D1 migrations are explicitly applied using `pnpm db:migrate`. Database backups and credentials must never be committed. Gallery data is backed by `lib/gallery-sources.json`; R2 originals are uploaded separately and verified by SHA-256. Routine source deployments do not re-upload the gallery.
