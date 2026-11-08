@@ -1,10 +1,11 @@
+import {priceAustralianCatalogue} from './pricing-au';
 import covers from './catalog-covers.json';
 import packed from './catalog-packed.txt?raw';
 import {gunzipSync} from 'node:zlib';
 import {Buffer} from 'node:buffer';
 import type {Product} from './types';
 import {slugify} from './taxonomy';
-export const products:Product[]=JSON.parse(gunzipSync(Buffer.from(packed.trim(),'base64')).toString('utf8'));
+export const products:Product[]=JSON.parse(gunzipSync(Buffer.from(packed.trim(),'base64')).toString('utf8')).map(priceAustralianCatalogue);
 const byId=new Map(products.map(p=>[p.id,p]));
 export const productById=(id:string)=>byId.get(id);
 const departmentCounts:Record<string,number>={};
@@ -27,8 +28,8 @@ export function queryCatalog(params:URLSearchParams){
 
  const facets={colors:[...new Set(found.map(p=>p.color).filter(Boolean))].sort().slice(0,50),materials:[...new Set(found.map(p=>p.material).filter(Boolean))].sort().slice(0,45),brands:[...new Set(found.map(p=>p.brand).filter(Boolean))].sort().slice(0,45),subcategories:[...new Set(found.map(p=>p.subcategory))].sort()};
  const min=Number(params.get('min')||0),max=Number(params.get('max')||1000000);
- found=found.filter(p=>p.price>=min&&p.price<=max&&(!params.get('color')||p.color===params.get('color'))&&(!params.get('material')||p.material===params.get('material'))&&(!params.get('brand')||p.brand===params.get('brand')));
- const sort=params.get('sort');if(sort==='price-low')found.sort((a,b)=>a.price-b.price);if(sort==='price-high')found.sort((a,b)=>b.price-a.price);if(sort==='name')found.sort((a,b)=>a.name.localeCompare(b.name));
+ found=found.filter(p=>(p.price===null?(!params.get('min')&&!params.get('max')):p.price>=min&&p.price<=max)&&(!params.get('color')||p.color===params.get('color'))&&(!params.get('material')||p.material===params.get('material'))&&(!params.get('brand')||p.brand===params.get('brand')));
+ const sort=params.get('sort');if(sort==='price-low')found.sort((a,b)=>(a.price??Infinity)-(b.price??Infinity));if(sort==='price-high')found.sort((a,b)=>(b.price??-Infinity)-(a.price??-Infinity));if(sort==='name')found.sort((a,b)=>a.name.localeCompare(b.name));
  const total=found.length;const requestedPage=Math.max(1,Number(params.get('page')||1)||1);const limit=Math.min(60,Math.max(1,Number(params.get('limit')||24)||24));const page=Math.min(requestedPage,Math.max(1,Math.ceil(total/limit)));
  return {departmentImages,subcategoryImages,items:found.slice((page-1)*limit,page*limit),total,page,pages:Math.ceil(total/limit),facets,departmentCounts,subcategoryCounts,catalogTotal:products.length};
 }

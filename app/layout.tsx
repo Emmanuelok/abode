@@ -8,14 +8,14 @@ import "./pwa.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
-  title: { default: SITE_TITLE, template: "%s | Abode Ghana" },
+  title: { default: SITE_TITLE, template: "%s | Abode Australia" },
   description: SITE_DESCRIPTION,
-  applicationName: "Abode Ghana",
+  applicationName: "Abode Australia",
   manifest: "/manifest.webmanifest",
   appleWebApp: { capable: true, statusBarStyle: "default", title: "Abode" },
   formatDetection: { telephone: false },
   openGraph: {
-    type: "website", locale: "en_GH", siteName: "Abode Ghana",
+    type: "website", locale: "en_AU", siteName: "Abode Australia",
     title: SITE_TITLE, description: SITE_DESCRIPTION, images: [SHARE_IMAGE], url: SITE_ORIGIN,
   },
   twitter: { card: "summary_large_image", title: SITE_TITLE, description: SITE_DESCRIPTION, images: [SHARE_IMAGE] },

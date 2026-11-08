@@ -1,5 +1,5 @@
 /* Only explicit, public brand assets are stored offline. Never store customer data. */
-const CACHE = 'abode-public-v1';
+const CACHE = 'abode-public-v2-au';
 const OFFLINE = '/offline.html';
 const PUBLIC_ASSETS = [OFFLINE, '/favicon.svg', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/maskable-192.png', '/icons/maskable-512.png', '/icons/apple-touch-icon.png'];
 

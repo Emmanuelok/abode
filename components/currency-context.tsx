@@ -1,0 +1,16 @@
+"use client";
+import {createContext,useContext,useEffect,useState} from 'react';
+import snapshot from '@/lib/exchange-rates.json';
+const supported=['AUD','USD','GBP','CAD','EUR','NZD','JPY','SGD','HKD','CHF','CNY','INR','AED','ZAR','NGN','GHS'] as const;
+type CurrencyContext={currency:string;change:(c:string)=>void;money:(n:number|null)=>string;rate:number;ghsPerAUD:number;date:string;fresh:boolean;stale:boolean};
+const Context=createContext<CurrencyContext|null>(null);
+export function CurrencyProvider({children}:{children:React.ReactNode}){
+ const [currency,setCurrency]=useState('AUD');const [rates,setRates]=useState<Record<string,number>>(snapshot.rates);const [date,setDate]=useState(snapshot.time_last_update_utc);const [fresh,setFresh]=useState(false);const [stale,setStale]=useState(false);
+ useEffect(()=>{Promise.resolve().then(()=>{setStale(Date.now()-Date.parse(snapshot.time_last_update_utc)>172800000);try{const c=localStorage.getItem('abode:currency');if(c&&supported.some(value=>value===c))setCurrency(c)}catch{}});const abort=new AbortController();fetch('/api/exchange-rates',{signal:abort.signal}).then(r=>{if(!r.ok)throw Error();return r.json() as Promise<typeof snapshot>}).then(d=>{if(d.base_code==='AUD'&&d.rates?.AUD>0&&Number.isFinite(Date.parse(d.time_last_update_utc))&&supported.every(c=>Number.isFinite(d.rates[c])&&d.rates[c]>0)){setRates(d.rates);setDate(d.time_last_update_utc);setFresh(true);setStale(Date.now()-Date.parse(d.time_last_update_utc)>172800000)}}).catch(()=>{});return()=>abort.abort()},[]);
+ const change=(c:string)=>{if(!supported.some(value=>value===c))return;setCurrency(c);try{localStorage.setItem('abode:currency',c)}catch{}};
+ const rate=rates[currency];const money=(value:number|null)=>value===null?'Quote required':new Intl.NumberFormat('en-AU',{style:'currency',currency,currencyDisplay:'code'}).format(value*rate);
+ return <Context.Provider value={{currency,change,money,rate,ghsPerAUD:rates.GHS,date,fresh,stale}}>{children}</Context.Provider>;
+}
+export const useCurrency=()=>{const value=useContext(Context);if(!value)throw new Error('CurrencyProvider required');return value};
+export const useMoney=()=>useCurrency().money as (value:number|null)=>string;
+export function CurrencyBar(){const {currency,change,date,fresh,stale}=useCurrency();return <aside className="currency-bar" aria-label="Currency and indicative pricing"><div><span className="currency-place">AUSTRALIAN LIVING. YOUR POINT OF VIEW.</span><label>View prices in <select aria-label="Display currency" value={currency} onChange={e=>change(e.target.value)}>{supported.map(c=><option key={c} value={c}>{c}</option>)}</select></label></div><details><summary>Indicative prices · currency information</summary><p>Original indicative prices are in AUD, based on similar Australian retail products, not identical-item quotes. Other currencies are dated equivalents. Unmatched items require a quote. No payments are collected. Comparable GST treatment is unverified; final GST, delivery, availability and price require a supplier quotation.</p><p>{stale?'Older reference rates':fresh?'Latest available rates':'Saved reference rates'}: {date}. Rates from <a href="https://www.exchangerate-api.com" target="_blank" rel="noreferrer">ExchangeRate-API</a>. Bank rates and fees may differ.</p></details></aside>}

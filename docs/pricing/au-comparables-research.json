@@ -1,0 +1,64 @@
+{
+  "status": "research_only_not_live_prices",
+  "observedDateUTC": "2026-11-07",
+  "currency": "AUD",
+  "method": "Australian retailer comparables; not identical SKU prices, no availability/fulfilment guarantee. Do not copy retailer discount/crossout claims to Abode. Final AUD retail prices require SKU-level fit and supplier economics. Shipping not included; GST treatment of each source must still be verified.",
+  "references": [
+    {
+      "id": "fabric-chaise",
+      "name": "Quinn 4 Seater Upholstered Sofa with Reversible Chaise",
+      "observedSaleAUD": 1799,
+      "observedPriorAUD": 2299,
+      "source": "https://www.templeandwebster.com.au/Modular-Sofas-C1851412.html",
+      "limitations": "Fabric chaise; seat count and dimensions must be matched. Sale reference, not an identical item."
+    },
+    {
+      "id": "leather-chaise",
+      "name": "Terry 4 Seater Genuine Leather Sofa with Chaise",
+      "observedSaleAUD": 3299,
+      "observedPriorAUD": 3899,
+      "source": "https://www.templeandwebster.com.au/Modular-Sofas-C1851412.html",
+      "limitations": "Genuine leather chaise; cannot use for faux leather or ordinary straight sofa."
+    },
+    {
+      "id": "slipcover-chaise",
+      "name": "Jude 4 Seater Slipcover Sofa with Reversible Chaise",
+      "observedSaleAUD": 1599,
+      "observedPriorAUD": 1799,
+      "source": "https://www.templeandwebster.com.au/Modular-Sofas-C1851412.html",
+      "limitations": "Slipcover fabric chaise; dimensions, orientation and seat count differ."
+    },
+    {
+      "id": "compact-chaise",
+      "name": "Thea 3 Seater Sofa with Reversible Chaise",
+      "observedSaleAUD": 949,
+      "observedPriorAUD": 1299,
+      "source": "https://www.templeandwebster.com.au/Modular-Sofas-C1851412.html",
+      "limitations": "Observed sale range AUD949\u20131199; this record is lower-bound reference only."
+    },
+    {
+      "id": "swivel-chair",
+      "name": "Eloise Chenille Swivel Armchair",
+      "observedSaleAUD": 299,
+      "observedPriorAUD": 349,
+      "source": "https://www.templeandwebster.com.au/Armchairs-C1813539.html",
+      "limitations": "Swivel chenille only; not equivalent to leather, recliner or static armchair."
+    },
+    {
+      "id": "rattan-chair",
+      "name": "ULRIKSBERG Armchair",
+      "observedSaleAUD": 179.1,
+      "observedPriorAUD": 199,
+      "source": "https://www.ikea.com/au/en/rooms/living-room/",
+      "limitations": "Sale reference, valid to 30 Nov 2026 or while stocks last; material and dimensions require comparison."
+    },
+    {
+      "id": "coffee-table",
+      "name": "BORGEBY Coffee table",
+      "observedSaleAUD": 152.1,
+      "observedPriorAUD": 169,
+      "source": "https://www.ikea.com/au/en/rooms/living-room/",
+      "limitations": "Sale reference, valid to 30 Nov 2026 or while stocks last; not a benchmark for all sizes/materials."
+    }
+  ]
+}

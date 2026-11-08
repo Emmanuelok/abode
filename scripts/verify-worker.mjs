@@ -34,7 +34,7 @@ try{
   return {res,data};
  };
  const bucket=await mf.getR2Bucket('GALLERY');const imageKey='0'.repeat(32)+'.jpg';await bucket.put('gallery/'+imageKey,new Uint8Array([255,216,255,217]),{httpMetadata:{contentType:'image/jpeg'}});const imageResponse=await mf.dispatchFetch('http://qa.local/catalog/gallery/'+imageKey);assert.equal(imageResponse.status,200);assert.equal(imageResponse.headers.get('content-type'),'image/jpeg');assert.equal((await imageResponse.arrayBuffer()).byteLength,4);checks.push('same-origin R2 gallery reads');
- let r=await call('/api/catalog?limit=4');assert.equal(r.res.status,200);assert.equal(r.data.catalogTotal,catalog.length);assert.equal(r.data.items.length,4);const product=r.data.items[0];checks.push(`catalog: ${catalog.length} products, 4-item pagination`);
+ let r=await call('/api/catalog?limit=4');assert.equal(r.res.status,200);assert.equal(r.data.catalogTotal,catalog.length);assert.equal(r.data.items.length,4);const product=r.data.items[0];const unpriced=r.data.items.find(p=>p.price===null);assert.ok(unpriced);checks.push(`catalog: ${catalog.length} products, 4-item pagination`);
  let categoryCount=0;for(const d of departments){const dr=await call('/api/catalog?department='+d.slug+'&limit=1');assert(dr.data.total>0,'Empty department: '+d.slug);for(const g of d.groups)for(const label of g.items){const route=d.slug+'/'+slugify(label);const cr=await call('/api/catalog?department='+d.slug+'&subcategory='+slugify(label)+'&limit=1');assert.equal(cr.res.status,200,route);assert(cr.data.total>0,'Empty collection: '+route);assert(cr.data.items.length===1,route);categoryCount++}}checks.push(`${departments.length} departments and ${categoryCount} submenu collections: all populated`);
  const page2=await call('/api/catalog?page=2&limit=4');assert(!page2.data.items.some(p=>r.data.items.some(first=>first.id===p.id)));checks.push('page navigation returns distinct products');
  r=await call('/api/catalog?ids=');assert.deepEqual(r.data.items,[]);checks.push('empty selections do not load unrelated products');
@@ -47,8 +47,8 @@ try{
  const forged=await mf.dispatchFetch('http://qa.local/api/state',{headers:{'oai-authenticated-user-id':'owner','oai-authenticated-user-email':'owner@example.com'}});const forgedData=await forged.json();assert.equal(forgedData.user.signedIn,false);assert.deepEqual(forgedData.state.cart,[]);checks.push('untrusted ChatGPT identity headers ignored');
  const crossOrigin=await mf.dispatchFetch('http://qa.local/api/state',{method:'POST',headers:{Origin:'https://attacker.example','Content-Type':'application/json',Cookie:cookie},body:JSON.stringify({key:'wishlist',value:[]})});assert.notEqual(crossOrigin.status,200);checks.push('cross-origin state write rejected');
  r=await call('/api/state',{key:'cart',value:[{id:product.id,quantity:-1}]},cookie);assert.equal(r.res.status,400);checks.push('invalid quantity rejected');
- r=await call('/api/requests',{kind:'order-quote',payload:{name:'QA Shopper',email:'qa@example.com',phone:'0241234567',address:'QA test address',gps:'WS-350-10592',items:[{id:product.id,quantity:2,guidePrice:1}],guideSubtotal:1}},cookie);assert.equal(r.res.status,201);assert.equal(r.data.status,'new');const quoteId=r.data.id;
- r=await call('/api/requests',undefined,cookie);assert.equal(r.data.requests.length,1);const payload=JSON.parse(r.data.requests[0].payload);assert.equal(payload.guideSubtotal,product.price*2);assert.equal(payload.paymentStatus,'not-collected');checks.push('quote persistence and server-side price calculation');
+ r=await call('/api/requests',{kind:'order-quote',payload:{name:'QA Shopper',email:'qa@example.com',phone:'0241234567',address:'QA test address',gps:'WS-350-10592',items:[{id:product.id,quantity:2,guidePrice:1},{id:unpriced.id,quantity:1,guidePrice:1}],guideSubtotal:1}},cookie);assert.equal(r.res.status,201);assert.equal(r.data.status,'new');const quoteId=r.data.id;
+ r=await call('/api/requests',undefined,cookie);assert.equal(r.data.requests.length,1);const payload=JSON.parse(r.data.requests[0].payload);assert.equal(payload.priceCurrency,'AUD');assert.equal(payload.guideSubtotal,payload.items[0].guidePrice*2);assert.equal(payload.items[0].guidePrice,product.price);assert.equal(payload.incompletePricing,true);assert.equal(payload.items[1].guidePrice,null);assert.equal(payload.paymentStatus,'not-collected');checks.push('quote persistence and server-side price calculation');
  r=await call('/api/requests');assert.equal(r.data.requests.length,0);checks.push('quote records scoped to their session');
 
  // Seed users and sessions through Better Auth's actual native D1 adapter,
@@ -124,10 +124,10 @@ try{
  checks.push('compiled sign-out rejects CSRF, deletes the real session and prevents cookie replay without ending another user’s session');
 
  r=await call('/api/catalog/export');assert.equal(r.data.count,catalog.length);checks.push('complete catalog export');
- r=await call('/');assert.equal(r.res.status,200);assert(r.data.includes('Every room.'));checks.push('homepage server response');
+ r=await call('/');assert.equal(r.res.status,200);assert(r.data.includes('Australian.'));checks.push('homepage server response');
  r=await call('/shop/living-room');assert.equal(r.res.status,200);assert(r.data.includes('Living Room'));checks.push('category route server response');
  for(const slug of ['window-treatments','cleaning','cooling','fitness','tools','entryway','garden']){const page=await call('/shop/'+slug);assert.equal(page.res.status,200,slug);assert(page.data.includes('collection-hero'),slug)}checks.push('all seven new department pages render');
  r=await call('/departments');assert.equal(r.res.status,200);assert(r.data.includes('Find your'));checks.push('complete department directory renders');
- r=await call('/product/'+product.id);assert.equal(r.res.status,200);assert(!r.data.includes('Every room.'));checks.push('direct product route does not render the homepage');
+ r=await call('/product/'+product.id);assert.equal(r.res.status,200);assert(!r.data.includes('Australian.'));checks.push('direct product route does not render the homepage');
  await writeFile('docs/worker-verification.json',JSON.stringify({passed:checks,timestamp:new Date().toISOString()},null,2));console.log(JSON.stringify({passed:checks},null,2));
 }finally{await mf.dispose()}

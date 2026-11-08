@@ -59,7 +59,7 @@ export function AuthPage() {
   return <main className="auth-page">
     <section className="auth-editorial" aria-label="A home, beautifully yours">
       <Image src="/images/living-room.webp" alt="A warm living room with sculptural furniture and natural textures" width={1000} height={1200} unoptimized loading="eager"/>
-      <span className="auth-editorial-kicker">ABODE GHANA · YOUR KIND OF HOME</span>
+      <span className="auth-editorial-kicker">ABODE AUSTRALIA · YOUR KIND OF HOME</span>
       <div className="auth-editorial-copy"><p className="eyebrow">GOOD THINGS BEGIN AT HOME</p><h1>A home,<br/><em>beautifully yours.</em></h1><p>A favourite chair. A softer landing.<br/>A little space to dream.</p></div>
       <div className="auth-editorial-note"><Heart size={19}/><span>Save the things that feel like you.</span></div>
     </section>

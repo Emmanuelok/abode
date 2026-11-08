@@ -1,0 +1,23 @@
+{
+  "observed": "2026-11-07",
+  "catalogue": 5357,
+  "benchmarked": 180,
+  "quoteRequired": 5177,
+  "counts": {
+    "fabricChaise": 24,
+    "quote-required": 5177,
+    "leatherChaise": 19,
+    "slipcoverChaise": 20,
+    "bedsideDrawer": 9,
+    "woodChest": 4,
+    "woodCoffee": 47,
+    "linenFloor": 13,
+    "woodTV": 7,
+    "writingDesk": 2,
+    "tableLamp": 19,
+    "storageOttoman": 14,
+    "linenLamp": 1,
+    "cornerDesk": 1
+  },
+  "fxObserved": "Sat, 07 Nov 2026 00:02:31 +0000"
+}

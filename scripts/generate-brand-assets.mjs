@@ -23,11 +23,11 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
 <path d="M743 560h455" stroke="#173f35" stroke-width="1" stroke-opacity=".2"/>
 <text x="78" y="113" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" letter-spacing="4" fill="#738066">THOUGHTFULLY CHOSEN. BEAUTIFULLY YOURS.</text>
 <text x="70" y="280" font-family="Georgia,Times New Roman,serif" font-size="166" font-weight="700" letter-spacing="-12" fill="#173f35">abode<tspan fill="#c96b46">.</tspan></text>
-<text x="82" y="357" font-family="Arial,Helvetica,sans-serif" font-size="16" letter-spacing="5" fill="#6f775f">GHANA</text>
+<text x="82" y="357" font-family="Arial,Helvetica,sans-serif" font-size="16" letter-spacing="5" fill="#6f775f">AUSTRALIA</text>
 <text x="77" y="442" font-family="Georgia,Times New Roman,serif" font-size="43" letter-spacing="-1" fill="#173f35">A home, beautifully yours.</text>
 <text x="81" y="490" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#6b745f">Furniture, home &amp; a little inspiration.</text>
 <path d="M82 546h602" stroke="#bcc2ac" stroke-width="1"/>
-<text x="82" y="585" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="2" fill="#6b745f">DISCOVER YOUR NEXT CHAPTER AT ABODE GHANA</text>
+<text x="82" y="585" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="2" fill="#6b745f">DISCOVER YOUR NEXT CHAPTER AT ABODE AUSTRALIA</text>
 </svg>`;
 
 await writeFile(resolve(root, 'public/social/abode-og.svg'), og);
